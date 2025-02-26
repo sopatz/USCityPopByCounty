@@ -44,9 +44,10 @@
                         let countyName = feature.properties.coty_name[0];
                         let stateName = feature.properties.ste_name[0];
                         let countyType = feature.properties.coty_type; //for dealing with county-equivalents
+                        let countyFIPS = feature.properties.coty_code[0]; //to deal with cases of two county-equivalents in the same state having the same name (Franklin, Virginia, e.g.)
                         layer.on('click', function (e) {
-                            showCitiesPopup(countyName, stateName, countyType, e.latlng);
-                            console.log(countyName); console.log(stateName); console.log(countyType); //for debugging purposes
+                            showCitiesPopup(countyName, stateName, countyType, countyFIPS, e.latlng);
+                            console.log(countyName); console.log(stateName); console.log(countyType); console.log(countyFIPS); //for debugging purposes
                         });
                     }
                 }).addTo(map);
@@ -59,13 +60,13 @@
                 cityData = data;
             });
 
-        function showCitiesPopup(countyName, stateName, countyType, latlng) {
+        function showCitiesPopup(countyName, stateName, countyType, countyFIPS, latlng) {
             // Clear existing markers
             cityMarkers.clearLayers();
 
             // Filter cities that belong to the selected county
             let cities = cityData
-                .filter(city => city.county_name === countyName && city.state_name === stateName)
+                .filter(city => city.county_name === countyName && city.state_name === stateName && city.county_fips == countyFIPS)
                 .sort((a, b) => b.population - a.population) // Sort by population (descending)
                 .slice(0, 5) // Get top 5 most populous cities
                 //.map(city => `${city.city} (${city.population.toLocaleString()})`);
