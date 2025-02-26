@@ -23,7 +23,7 @@ CITY_VERSION_FILE = "latest_city_version.txt"
 
 # ---------- County Data (OpenDataSoft) ----------
 COUNTY_GEOJSON_URL = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/georef-united-states-of-america-county/exports/geojson?lang=en&timezone=America%2FNew_York"
-COUNTY_GEOJSON_FILE = "counties.geojson"
+COUNTY_GEOJSON_FILE = "georef-united-states-of-america-county.geojson"
 COUNTY_VERSION_FILE = "latest_county_version.txt"
 
 
@@ -85,7 +85,7 @@ def get_latest_county_version():
     return None
 
 def download_county_geojson():
-    """Download the latest counties.geojson file."""
+    """Download the latest county geojson file."""
     print(f"Downloading latest county data from {COUNTY_GEOJSON_URL}...")
     response = requests.get(COUNTY_GEOJSON_URL)
     if response.status_code == 200:
