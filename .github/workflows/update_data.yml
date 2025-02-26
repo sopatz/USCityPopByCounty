@@ -27,7 +27,7 @@ jobs:
 
       - name: Read Update Status
         id: read_status
-        run: cat update_status.txt
+        run: echo "STATUS=$(cat update_status.txt)" >> $GITHUB_ENV
         continue-on-error: true
 
       - name: Send Email Notification
@@ -42,9 +42,10 @@ jobs:
           body: |
             Weekly data update has completed.
 
-            ${{ steps.read_status.outputs.stdout }}
+            ${{ env.STATUS }}
 
-            View logs: https://github.com/sopatz/USCityPopByCounty/actions
+            View logs: https://github.com/your-username/your-repo/actions
           to: ${{ secrets.TO_EMAIL }}
           from: ${{ secrets.FROM_EMAIL }}
           content_type: text/plain
+          
