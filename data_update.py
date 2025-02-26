@@ -6,6 +6,11 @@ import re
 import os
 import subprocess
 
+# =================================================================================================
+#  Checks https://simplemaps.com/data/us-cities for updated data. If there is a new version of the 
+#  US Cities data, it is downloaded, and all the city info in "city_populations.json" are updated.
+# =================================================================================================
+
 # URL of the data page and zip file pattern
 DATA_PAGE_URL = "https://simplemaps.com/data/us-cities"
 ZIP_BASE_URL = "https://simplemaps.com/static/data/us-cities/"

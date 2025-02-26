@@ -29,40 +29,24 @@
         let cityData = [];
         let cityMarkers = L.layerGroup().addTo(map); // Store city markers globally
 
-        // State FIPS Code to State Name mapping
-        const stateFIPSMap = {
-            "01": "Alabama", "02": "Alaska", "04": "Arizona", "05": "Arkansas", "06": "California",
-            "08": "Colorado", "09": "Connecticut", "10": "Delaware", "11": "District of Columbia",
-            "12": "Florida", "13": "Georgia", "15": "Hawaii", "16": "Idaho", "17": "Illinois",
-            "18": "Indiana", "19": "Iowa", "20": "Kansas", "21": "Kentucky", "22": "Louisiana",
-            "23": "Maine", "24": "Maryland", "25": "Massachusetts", "26": "Michigan",
-            "27": "Minnesota", "28": "Mississippi", "29": "Missouri", "30": "Montana",
-            "31": "Nebraska", "32": "Nevada", "33": "New Hampshire", "34": "New Jersey",
-            "35": "New Mexico", "36": "New York", "37": "North Carolina", "38": "North Dakota",
-            "39": "Ohio", "40": "Oklahoma", "41": "Oregon", "42": "Pennsylvania",
-            "44": "Rhode Island", "45": "South Carolina", "46": "South Dakota",
-            "47": "Tennessee", "48": "Texas", "49": "Utah", "50": "Vermont",
-            "51": "Virginia", "53": "Washington", "54": "West Virginia",
-            "55": "Wisconsin", "56": "Wyoming"
-        };
-
         // Add base tile layer from OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
         // Load counties GeoJSON
-        fetch("counties.geojson")
+        fetch("county_data.geojson")
             .then(response => response.json())
             .then(countyData => {
                 L.geoJSON(countyData, {
                     style: { color: "#555", weight: 1, fillOpacity: 0.3 },
                     onEachFeature: function (feature, layer) {
-                        let countyName = feature.properties.NAME;
-                        let stateFIPS = feature.properties.STATEFP;
-                        let stateName = stateFIPSMap[stateFIPS];
+                        let countyName = feature.properties.coty_name[0];
+                        let stateName = feature.properties.ste_name[0];
+                        let countyFIPS = feature.properties.coty_fp_code; //for dealing with the names of Alaskan county equivalents
                         layer.on('click', function (e) {
-                            showCitiesPopup(countyName, stateName, e.latlng);
+                            showCitiesPopup(countyName, stateName, countyFIPS, e.latlng);
+                            console.log(countyName); console.log(stateName); console.log(countyFIPS);
                         });
                     }
                 }).addTo(map);
@@ -75,7 +59,7 @@
                 cityData = data;
             });
 
-        function showCitiesPopup(countyName, stateName, latlng) {
+        function showCitiesPopup(countyName, stateName, countyFIPS, latlng) {
             // Clear existing markers
             cityMarkers.clearLayers();
 
@@ -95,9 +79,55 @@
 
             // Show popup with city list
             let cityList = cities.map(city => `${city.city} (${city.population.toLocaleString()})`);
+
+            // Dealing with county equivalent names
+            let county = "County"
+            if (stateName === "Louisiana") {
+                county = "Parish"
+            }
+            else if (stateName === "Alaska") {
+                if (countyFIPS === "013" || // Aleutians East Borough
+                    countyFIPS === "060" || // Bristol Bay Borough
+                    countyFIPS === "068" || // Denali Borough
+                    countyFIPS === "090" || // Fairbanks North Star Borough
+                    countyFIPS === "100" || // Haines Borough
+                    countyFIPS === "122" || // Kenai Peninsula Borough
+                    countyFIPS === "130" || // Ketchikan Gateway Borough
+                    countyFIPS === "150" || // Kodiak Island Borough
+                    countyFIPS === "164" || // Lake and Peninsula Borough
+                    countyFIPS === "170" || // Matanuska-Susitna Borough
+                    countyFIPS === "185" || // North Slope Borough
+                    countyFIPS === "188" || // Northwest Arctic Borough
+                    countyFIPS === "195") { // Petersburg Borough
+                        county = "Borough"
+                }
+                else if (countyFIPS === "110" || // Juneau City and Borough
+                         countyFIPS === "220" || // Sitka City and Borough
+                         countyFIPS === "275" || // Wrangell City and Borough
+                         countyFIPS === "282") { // Yakutat City and Borough
+                            county = "City and Borough"
+                }
+                else if (countyFIPS === "020" || // Anchorage Municipality
+                         countyFIPS === "230") { // Skagway Municipality
+                            county = "Municipality"
+                }
+                else if (countyFIPS === "016" || // Aleutians West Census Area
+                         countyFIPS === "050" || // Bethel Census Area
+                         countyFIPS === "063" || // Chucagh Census Area
+                         countyFIPS === "066" || // Copper River Census Area
+                         countyFIPS === "070" || // Dillingham Census Area
+                         countyFIPS === "105" || // Hoonah-Angoon Census Area
+                         countyFIPS === "158" || // Kusilvak Census Area
+                         countyFIPS === "180" || // Nome Census Area
+                         countyFIPS === "198" || // Prince of Wales-Hyder Census Area
+                         countyFIPS === "240" || // Southeast Fairbanks Census Area
+                         countyFIPS === "290") { // Yukon-Koyukuk Census Area
+                            county = "Census Area"
+                }
+            }
             L.popup()
                 .setLatLng(latlng)
-                .setContent(`<b>${countyName} County, ${stateName}</b><br>${cityList.join("<br>") || "No data available"}`)
+                .setContent(`<b>${countyName} ${county}, ${stateName}</b><br>${cityList.join("<br>") || "No data available"}`)
                 .openOn(map);
         }
     </script>
