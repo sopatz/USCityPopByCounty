@@ -23,13 +23,12 @@ jobs:
 
       - name: Run Data Update Script
         id: update_script
-        run: |
-          python data_update.py > update_log.txt
-          if grep -q "No new data" update_log.txt; then
-            echo "UPDATED=false" >> $GITHUB_ENV
-          else
-            echo "UPDATED=true" >> $GITHUB_ENV
-          fi
+        run: python data_update.py
+
+      - name: Read Update Status
+        id: read_status
+        run: cat update_status.txt
+        continue-on-error: true
 
       - name: Send Email Notification
         if: always()
@@ -42,8 +41,10 @@ jobs:
           subject: "GitHub Data Update Report"
           body: |
             Weekly data update has completed.
-            Status: ${{ env.UPDATED == 'true' && 'Data was updated ✅' || 'No new updates ❌' }}
-            View logs: https://github.com/your-username/your-repo/actions
+
+            ${{ steps.read_status.outputs.stdout }}
+
+            View logs: https://github.com/sopatz/USCityPopByCounty/actions
           to: ${{ secrets.TO_EMAIL }}
           from: ${{ secrets.FROM_EMAIL }}
           content_type: text/plain
