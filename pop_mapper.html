@@ -35,7 +35,7 @@
         }).addTo(map);
 
         // Load counties GeoJSON
-        fetch("georef-united-states-of-america-county.geojson")
+        fetch("county_data.geojson")
             .then(response => response.json())
             .then(countyData => {
                 L.geoJSON(countyData, {

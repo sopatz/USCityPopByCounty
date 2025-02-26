@@ -9,6 +9,9 @@ import subprocess
 # =================================================================================================
 #  Checks https://simplemaps.com/data/us-cities for updated data. If there is a new version of the 
 #  US Cities data, it is downloaded, and all the city info in "city_populations.json" are updated.
+#
+#  If new county data is needed, go to the following link and download the GeoJSON file:
+#  https://public.opendatasoft.com/explore/dataset/georef-united-states-of-america-county/export/?flg=en-us&disjunctive.ste_code&disjunctive.ste_name&disjunctive.coty_code&disjunctive.coty_name
 # =================================================================================================
 
 # URL of the data page and zip file pattern
