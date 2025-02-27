@@ -7,115 +7,293 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
-        /* Make it so map spans entire screen */
+
         #map {
             width: 100vw;
             height: 100vh;
         }
+
+        /* Search-box container */
+        #search-container {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #search-input {
+            width: 250px;
+            padding: 5px;
+            padding-right: 26px;
+        }
+
+        /* Clear button "X" inside input */
+        #clear-btn {
+            position: absolute;
+            right: 13px;
+            transform: translateY(-120%);
+            cursor: pointer;
+            font-size: 18px;
+            color: gray;
+            display: none; /* Initially hidden */
+        }
+
+        #clear-btn:hover {
+            color: black;
+        }
+
+        /* Suggestions drop-down */
+        #suggestions {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            border-radius: 3px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .suggestion {
+            padding: 8px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+
+        .suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion:hover {
+            background: #f0f0f0;
+        }
     </style>
 </head>
+
 <body>
     <div id="map"></div>
 
+    <!-- Search box -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search a County..." autocomplete="off">
+        <span id="clear-btn">&times;</span>
+        <div id="suggestions"></div>
+    </div>
+
     <script>
-        // Initialize the map centered in the US
-        var map = L.map('map').setView([37.8, -96], 4);
+        var map = L.map('map').setView([37.8, -96], 4); //center map on the US
 
         let cityData = [];
-        let cityMarkers = L.layerGroup().addTo(map); // Store city markers globally
+        let cityMarkers = L.layerGroup().addTo(map);
+        let counties = []; // Stores county data
+        let countyLayers = {}; // Stores county layers for searching
 
-        // Add base tile layer from OpenStreetMap
+        // Add tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Load counties GeoJSON
+        // Load county GeoJSON
         fetch("county_data.geojson")
             .then(response => response.json())
             .then(countyData => {
+                // Function to adjust longitude values recursively so that they are all negative
+                function adjustGeometryCoordinates(geometry) {
+                    if (geometry.type === "Polygon") {
+                        geometry.coordinates = geometry.coordinates.map(ring =>
+                            ring.map(coord => [coord[0] > 0 ? coord[0] - 360 : coord[0], coord[1]])
+                        );
+                    } else if (geometry.type === "MultiPolygon") {
+                        geometry.coordinates = geometry.coordinates.map(polygon =>
+                            polygon.map(ring =>
+                                ring.map(coord => [coord[0] > 0 ? coord[0] - 360 : coord[0], coord[1]])
+                            )
+                        );
+                    }
+                }
+
+                // Apply the longitude adjustment to each county feature
+                countyData.features.forEach(feature => {
+                    adjustGeometryCoordinates(feature.geometry);
+                });
+
                 L.geoJSON(countyData, {
                     style: { color: "#555", weight: 1, fillOpacity: 0.3 },
                     onEachFeature: function (feature, layer) {
                         let countyName = feature.properties.coty_name[0];
                         let stateName = feature.properties.ste_name[0];
-                        let countyType = feature.properties.coty_type; //for dealing with county-equivalents
-                        let countyFIPS = feature.properties.coty_code[0]; //to deal with cases of two county-equivalents in the same state having the same name (Franklin, Virginia, e.g.)
+                        let countyType = feature.properties.coty_type;
+                        let countyFIPS = feature.properties.coty_code[0];
+
+                        // Format full county name
+                        let fullCountyName = countyName;
+                        switch (countyType) {
+                            case "county":
+                                fullCountyName += " County";
+                                break;
+                            case "parish":
+                                fullCountyName += " Parish";
+                                break;
+                            case "borough":
+                                fullCountyName += " Borough";
+                                break;
+                            case "municipality":
+                            case "municipio":
+                                fullCountyName += " Municipality";
+                                break;
+                            case "census area":
+                                fullCountyName += " Census Area";
+                                break;
+                            case "district":
+                                fullCountyName += " District";
+                                break;
+                            case "island":
+                                fullCountyName += " Island";
+                                break;
+                            case "city":
+                                fullCountyName = "City of " + fullCountyName;
+                                break;
+                            default:
+                                if (!countyType && stateName === "Connecticut") {
+                                    fullCountyName += " Planning Region";
+                                }
+                                break;
+                        }
+
+                        fullCountyName += ", " + stateName;
+                        
+                        // Store for search
+                        let countyCenter = layer.getBounds().getCenter();
+                        counties.push({ name: fullCountyName, center: countyCenter });
+                        countyLayers[fullCountyName] = layer;
+
                         layer.on('click', function (e) {
-                            showCitiesPopup(countyName, stateName, countyType, countyFIPS, e.latlng);
-                            console.log(countyName); console.log(stateName); console.log(countyType); console.log(countyFIPS); //for debugging purposes
+                            showCitiesPopup(countyName, fullCountyName, countyFIPS, e.latlng);
                         });
                     }
                 }).addTo(map);
             });
 
-        // Load city population JSON
+        // Load city population data
         fetch("city_population.json")
             .then(response => response.json())
             .then(data => {
                 cityData = data;
             });
 
-        function showCitiesPopup(countyName, stateName, countyType, countyFIPS, latlng) {
-            // Clear existing markers
+        function showCitiesPopup(countyName, fullCountyName, countyFIPS, latlng) {
             cityMarkers.clearLayers();
-
-            // Filter cities that belong to the selected county
             let cities = cityData
-                .filter(city => city.county_name === countyName && city.state_name === stateName && city.county_fips == countyFIPS)
-                .sort((a, b) => b.population - a.population) // Sort by population (descending)
-                .slice(0, 5) // Get top 5 most populous cities
-                //.map(city => `${city.city} (${city.population.toLocaleString()})`);
+                .filter(city => city.county_name === countyName && city.county_fips == countyFIPS)
+                .sort((a, b) => b.population - a.population)
+                .slice(0, 5);
 
-            // Add markers for each city
             cities.forEach(city => {
-                let marker = L.marker([city.lat, city.lng])
+                let adjustedLng = city.lng > 0 ? city.lng - 360 : city.lng; // Adjust longitude if positive
+                L.marker([city.lat, adjustedLng])
                     .bindPopup(`<b>${city.city}</b><br>Population: ${city.population.toLocaleString()}`)
                     .addTo(cityMarkers);
             });
 
-            // Show popup with city list
             let cityList = cities.map(city => `${city.city} (${city.population.toLocaleString()})`);
-
-            // Dealing with county-equivalent names
-            let fullCountyName = countyName;
-            if (countyType === "county") {
-                fullCountyName += " County";
-            }
-            else if (countyType === "municipality" || countyType === "municipio") {
-                fullCountyName += " Municipality";
-            }
-            else if (countyType === "borough") {
-                fullCountyName += " Borough"
-            }
-            else if (countyType === "census area") {
-                fullCountyName += " Census Area";
-            }
-            else if (countyType === "city and borough") {
-                fullCountyName += " City and Borough"
-            }
-            else if (countyType === "city") {
-                fullCountyName = "City of " + fullCountyName;
-            }
-            else if (countyType === "district") {
-                fullCountyName += " District";
-            }
-            else if (countyType === "island") {
-                fullCountyName += " Island";
-            }
-            else if (countyType === null && stateName === "Connecticut") {
-                fullCountyName += " Planning Region";
-            }
-
             L.popup()
                 .setLatLng(latlng)
-                .setContent(`<b>${fullCountyName}, ${stateName}</b><br>${cityList.join("<br>") || "No data available"}`)
+                .setContent(`<b>${fullCountyName}</b><br>${cityList.join("<br>") || "No data available"}`)
                 .openOn(map);
         }
+
+        function selectCounty(countyName) {
+            let selectedCounty = counties.find(c => c.name === countyName);
+            if (!selectedCounty) return;
+
+            document.getElementById("search-input").value = countyName;
+            document.getElementById("suggestions").style.display = "none";
+
+            let targetZoom = 8;
+            
+            // Use flyTo() to ensure smooth panning even if already in view
+            map.flyTo(selectedCounty.center, targetZoom, {
+                animate: true,
+                duration: 0.8 // Smooth transition
+            });
+
+            let layer = countyLayers[countyName];
+            let countyFeature = layer.feature.properties;
+            let countyFIPS = countyFeature.coty_code[0];
+            let countyBaseName = countyFeature.coty_name[0];
+
+            // Show popup after animation completes
+            setTimeout(() => {
+                showCitiesPopup(countyBaseName, countyName, countyFIPS, selectedCounty.center);
+            }, 800);
+        }
+
+        let searchInput = document.getElementById("search-input");
+        let clearBtn = document.getElementById("clear-btn");
+        let suggestionsBox = document.getElementById("suggestions");
+
+        searchInput.addEventListener("input", function () {
+            clearBtn.style.display = this.value ? "block" : "none";
+            let query = this.value.toLowerCase().trim();
+            let suggestionsBox = document.getElementById("suggestions");
+
+            if (!query) {
+                suggestionsBox.style.display = "none";
+                return;
+            }
+
+            // Convert query into an array of words (ignoring punctuation & extra spaces)
+            let queryWords = query.replace(/[^a-zA-Z0-9 ]/g, "").split(/\s+/);
+
+            let filteredCounties = counties.filter(county => {
+                let countyName = county.name.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, "");
+                return queryWords.every(word => countyName.includes(word));
+            });
+
+            // Populate and show suggestions
+            suggestionsBox.innerHTML = "";
+            if (filteredCounties.length > 0) {
+                filteredCounties.forEach(county => {
+                    let suggestionItem = document.createElement("div");
+                    suggestionItem.textContent = county.name;
+                    suggestionItem.classList.add("suggestion");
+                    suggestionItem.addEventListener("click", function () {
+                        selectCounty(county.name);
+                        suggestionsBox.style.display = "none";
+                    });
+                    suggestionsBox.appendChild(suggestionItem);
+                });
+                suggestionsBox.style.display = "block";
+            } else {
+                suggestionsBox.style.display = "none";
+            }
+        });
+
+        clearBtn.addEventListener("click", function () {
+            searchInput.value = "";
+            clearBtn.style.display = "none";
+            suggestionsBox.style.display = "none";
+        });
+
+        suggestionsBox.addEventListener("click", function (e) {
+            if (e.target.classList.contains("suggestion")) {
+                selectCounty(e.target.textContent);
+            }
+        });
     </script>
 </body>
 </html>
