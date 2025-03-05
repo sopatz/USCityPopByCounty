@@ -81,6 +81,83 @@
         .suggestion:hover {
             background: #f0f0f0;
         }
+
+         /* Settings Button */
+         #settings-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        #settings-button:hover {
+            background: #f0f0f0;
+        }
+        /* Settings Modal */
+        #settings-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 1100;
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        /* Modal Overlay */
+        #modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1099;
+            transition: opacity 0.3s ease-in-out;
+        }
+        /* Close Button */
+        #close-modal {
+            float: right;
+            cursor: pointer;
+            font-size: 18px;
+            color: gray;
+        }
+        #close-modal:hover {
+            color: black;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+        /* Slide-out animation */
+        @keyframes slideOut {
+            from {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -94,6 +171,25 @@
         <div id="suggestions"></div>
     </div>
 
+    <!-- Settings Button -->
+    <button id="settings-button">⚙️ Settings</button>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay"></div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal">
+        <span id="close-modal">&times;</span>
+        <h3>Settings</h3>
+        <label>
+            <input type="checkbox" id="show-city-markers" checked>
+            Show City Markers
+        </label>
+        <br><br>
+        <label for="city-count">Number of cities to display: </label>
+        <input type="number" id="city-count" min="1" max="120" value="5" style="width: 50px;">
+    </div>
+
     <script>
         var map = L.map('map').setView([37.8, -96], 4); //center map on the US
 
@@ -101,6 +197,7 @@
         let cityMarkers = L.layerGroup().addTo(map);
         let counties = []; // Stores county data
         let countyLayers = {}; // Stores county layers for searching
+        let numCitiesToShow = 5; // Default number of cities to display
 
         // Add tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -195,12 +292,78 @@
                 cityData = data;
             });
 
+
+        // Settings Modal Logic
+        const settingsButton = document.getElementById("settings-button");
+        const settingsModal = document.getElementById("settings-modal");
+        const modalOverlay = document.getElementById("modal-overlay");
+        const closeModal = document.getElementById("close-modal");
+        const showCityMarkersCheckbox = document.getElementById("show-city-markers");
+        const cityCountInput = document.getElementById("city-count");
+
+        function openSettings() {
+            settingsModal.style.display = "block";
+            modalOverlay.style.display = "block";
+            settingsModal.style.animation = "slideIn 0.3s ease-out forwards";
+            modalOverlay.style.opacity = "1";
+        }
+
+        function closeSettings() {
+            settingsModal.style.animation = "slideOut 0.3s ease-in forwards";
+            modalOverlay.style.opacity = "0";
+            setTimeout(() => {
+                settingsModal.style.display = "none";
+                modalOverlay.style.display = "none";
+            }, 300);
+        }
+
+        settingsButton.addEventListener("click", openSettings);
+        closeModal.addEventListener("click", closeSettings);
+        modalOverlay.addEventListener("click", closeSettings);
+
+        // Toggle city markers visibility
+        showCityMarkersCheckbox.addEventListener("change", function () {
+            if (this.checked) {
+                cityMarkers.addTo(map);
+            } else {
+                cityMarkers.remove();
+            }
+        });
+
+        // Store last valid number of cities
+        cityCountInput.value = numCitiesToShow; // Set default
+
+        cityCountInput.addEventListener("input", function () {
+            let value = this.value.trim(); // Get input value
+
+            let num = parseInt(value);
+            if (!isNaN(num) && num >= 1 && num <= 120) {
+                numCitiesToShow = num; // Update last valid value
+            }
+            else if (num > 120) {
+                numCitiesToShow = 120;
+                this.value = 120;
+            }
+            else if (num == 0) {
+                numCitiesToShow = 1;
+                this.value = 1;
+            }
+        });
+
+        // Handle when user leaves the input box empty
+        cityCountInput.addEventListener("blur", function () {
+            if (this.value.trim() === "") {
+                this.value = numCitiesToShow; // Restore last valid value
+            }
+        });
+
+
         function showCitiesPopup(countyName, fullCountyName, countyFIPS, latlng) {
             cityMarkers.clearLayers();
             let cities = cityData
                 .filter(city => city.county_name === countyName && city.county_fips == countyFIPS)
                 .sort((a, b) => b.population - a.population)
-                .slice(0, 5);
+                .slice(0, numCitiesToShow);
 
             cities.forEach(city => {
                 let adjustedLng = city.lng > 0 ? city.lng - 360 : city.lng; // Adjust longitude if positive
