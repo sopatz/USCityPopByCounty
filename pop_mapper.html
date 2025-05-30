@@ -314,6 +314,16 @@
                 cityData = data;
             });
 
+        // Load county population data
+        let countyPopulationLookup = {};
+        fetch("county_population.json")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(entry => {
+                    let paddedFIPS = entry.county_fips.toString().padStart(5, '0');
+                    countyPopulationLookup[paddedFIPS] = entry.population;
+                });
+        });
 
         // Settings Modal Logic
         const settingsButton = document.getElementById("settings-button");
@@ -379,7 +389,6 @@
             }
         });
 
-
         function showCitiesPopup(countyName, fullCountyName, countyFIPS, latlng) {
             cityMarkers.clearLayers();
             let cities = cityData
@@ -388,18 +397,31 @@
                 .slice(0, numCitiesToShow);
 
             cities.forEach(city => {
-                let adjustedLng = city.lng > 0 ? city.lng - 360 : city.lng; // Adjust longitude if positive
+                let adjustedLng = city.lng > 0 ? city.lng - 360 : city.lng;
                 L.marker([city.lat, adjustedLng])
                     .bindPopup(`<b>${city.city}</b><br>Population: ${city.population.toLocaleString()}`)
                     .addTo(cityMarkers);
             });
 
             let cityList = cities.map(city => `${city.city} (${city.population.toLocaleString()})`);
+            
+            // Add County Population line if available
+            let countyPop = countyPopulationLookup[countyFIPS];
+            let countyPopLine = countyPop !== undefined
+                ? `<b>County Population:</b> ${countyPop.toLocaleString()}`
+                : "";
+
             L.popup()
                 .setLatLng(latlng)
-                .setContent(`<b>${fullCountyName}</b><br>${cityList.join("<br>") || "No data available"}`)
+                .setContent(`
+                    <strong style="font-size: 15px;">${fullCountyName}</strong>
+                    <hr style="margin: 3px 0;">
+                    ${countyPopLine || ""}
+                    ${cityList.length > 0 ? "<br>" + cityList.join("<br>") : "<br>No data available"}
+                `)
                 .openOn(map);
         }
+
 
         function selectCounty(countyName) {
             let selectedCounty = counties.find(c => c.name === countyName);

@@ -30,7 +30,7 @@ COUNTY_ZIP_BASE_URL = "https://simplemaps.com/static/data/us-counties/"
 COUNTY_ZIP_FILE_PATTERN = r"us-counties/([\d\.]+)/basic/simplemaps_uscounties_basicv([\d\.]+)\.zip"
 
 COUNTY_CSV_FILE = "uscounties.csv"
-COUNTY_JSON_FILE = "county_data.json"
+COUNTY_JSON_FILE = "county_population.json"
 COUNTY_VERSION_FILE = "latest_county_version.txt"
 
 # ------------------- Shared Files -------------------
@@ -135,7 +135,7 @@ if __name__ == "__main__":
         download_and_extract_zip(county_zip_url, COUNTY_CSV_FILE)
         convert_county_csv_to_json()
         save_new_version(COUNTY_VERSION_FILE, latest_county_version)
-        commit_and_push([COUNTY_JSON_FILE, COUNTY_VERSION_FILE], "Automated update of county_data.json")
+        commit_and_push([COUNTY_JSON_FILE, COUNTY_VERSION_FILE], "Automated update of county_population.json")
         status_messages.append(f"✅ County data updated to version {latest_county_version}")
     elif latest_county_version:
         print("County data is already up to date.")
