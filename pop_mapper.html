@@ -84,6 +84,10 @@
 
         /* Move zoom buttons to bottom-left on mobile */
         @media (max-width: 768px) {
+            .leaflet-top,
+            .leaflet-left {
+                top: auto !important;
+            }
             .leaflet-control-zoom {
                 top: auto !important;
                 bottom: 10px !important;
