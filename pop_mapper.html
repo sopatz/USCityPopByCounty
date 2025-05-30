@@ -95,6 +95,15 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
             z-index: 1000;
         }
+        /* Put settings button in bottom-left instead of top-right on mobile */
+        @media (max-width: 768px) {
+            #settings-button {
+                top: auto;
+                bottom: 10px;
+                right: auto;
+                left: 10px;
+            }
+        }
         #settings-button:hover {
             background: #f0f0f0;
         }
