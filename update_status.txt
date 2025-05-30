@@ -1,1 +1,2 @@
-❌ No new version. Current version (1.90) is up to date.
+❌ City data is up to date (version 1.90)
+✅ County data updated to version 1.90
