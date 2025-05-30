@@ -301,7 +301,7 @@
                         countyLayers[fullCountyName] = layer;
 
                         layer.on('click', function (e) {
-                            showCitiesPopup(countyName, fullCountyName, countyFIPS, e.latlng);
+                            showCitiesPopup(countyName, fullCountyName, countyFIPS, countyType, e.latlng);
                         });
                     }
                 }).addTo(map);
@@ -389,7 +389,7 @@
             }
         });
 
-        function showCitiesPopup(countyName, fullCountyName, countyFIPS, latlng) {
+        function showCitiesPopup(countyName, fullCountyName, countyFIPS, countyType, latlng) {
             cityMarkers.clearLayers();
             let cities = cityData
                 .filter(city => city.county_name === countyName && city.county_fips == countyFIPS)
@@ -404,24 +404,59 @@
             });
 
             let cityList = cities.map(city => `${city.city} (${city.population.toLocaleString()})`);
+
+            let label = "County";
+            switch (countyType) {
+                case "parish":
+                    label = "Parish";
+                    break;
+                case "borough":
+                    label = "Borough";
+                    break;
+                case "municipality":
+                case "municipio":
+                    label = "Municipality";
+                    break;
+                case "census area":
+                    label = "Census Area";
+                    break;
+                case "district":
+                    label = "District";
+                    break;
+                case "island":
+                    label = "Island";
+                    break;
+                case "city":
+                    label = "City";
+                    break;
+                case "city and borough":
+                    label = "City / Borough";
+                    break;
+                default:
+                    if (!countyType) {
+                        label = "Region";
+                    }
+                    break;
+            }
+
             
             // Add County Population line if available
             let countyPop = countyPopulationLookup[countyFIPS];
             let countyPopLine = countyPop !== undefined
-                ? `<b>County Population:</b> ${countyPop.toLocaleString()}`
+                ? `<b>${label} Population:</b> ${countyPop.toLocaleString()}`
                 : "";
+
 
             L.popup()
                 .setLatLng(latlng)
                 .setContent(`
                     <strong style="font-size: 15px;">${fullCountyName}</strong>
                     <hr style="margin: 3px 0;">
-                    ${countyPopLine || ""}
-                    ${cityList.length > 0 ? "<br>" + cityList.join("<br>") : "<br>No data available"}
+                    ${countyPopLine ? countyPopLine + "<br>" : ""}
+                    ${countyType === "city and borough" ? "" : (cityList.length > 0 ? cityList.join("<br>") : "No data available")}
                 `)
                 .openOn(map);
         }
-
 
         function selectCounty(countyName) {
             let selectedCounty = counties.find(c => c.name === countyName);
@@ -445,7 +480,7 @@
 
             // Show popup after animation completes
             setTimeout(() => {
-                showCitiesPopup(countyBaseName, countyName, countyFIPS, selectedCounty.center);
+                showCitiesPopup(countyBaseName, countyName, countyFIPS, countyFeature.coty_type, selectedCounty.center);
             }, 800);
         }
 
