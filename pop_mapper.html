@@ -84,17 +84,14 @@
 
         /* Move zoom buttons to bottom-left on mobile */
         @media (max-width: 768px) {
-            .leaflet-top,
-            .leaflet-left {
-                top: auto !important;
-            }
-            .leaflet-control-zoom {
+            .leaflet-top.leaflet-left {
                 top: auto !important;
                 bottom: 10px !important;
                 left: 10px !important;
-                right: auto !important;
-                position: absolute !important; /* Reinforce position override */
-                margin: 0 !important; /* Remove any auto spacing */
+                flex-direction: column;
+            }
+            .leaflet-control-zoom {
+                margin-bottom: 0 !important;
             }
         }
 
