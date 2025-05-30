@@ -82,6 +82,16 @@
             background: #f0f0f0;
         }
 
+        /* Move zoom buttons to bottom-left on mobile */
+        @media (max-width: 768px) {
+            .leaflet-control-zoom {
+                top: auto !important;
+                bottom: 10px !important;
+                left: 10px !important;
+                right: auto !important;
+            }
+        }
+
          /* Settings Button */
          #settings-button {
             position: absolute;
@@ -95,13 +105,13 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
             z-index: 1000;
         }
-        /* Put settings button in bottom-left instead of top-right on mobile */
+        /* Put settings button in bottom-right instead of top-right on mobile */
         @media (max-width: 768px) {
             #settings-button {
                 top: auto;
                 bottom: 10px;
-                right: auto;
-                left: 10px;
+                left: auto;
+                right: 10px;
             }
         }
         #settings-button:hover {
