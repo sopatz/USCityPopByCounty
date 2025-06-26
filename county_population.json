@@ -85,7 +85,7 @@
         "county_full":"Riverside County",
         "county_fips":6065,
         "state_name":"California",
-        "lat":33.7436,
+        "lat":33.7437,
         "lng":-115.9938,
         "population":2449909
     },
@@ -112,7 +112,7 @@
         "county_full":"King County",
         "county_fips":53033,
         "state_name":"Washington",
-        "lat":47.4902,
+        "lat":47.4903,
         "lng":-121.8052,
         "population":2262713
     },
@@ -211,8 +211,8 @@
         "county_full":"Philadelphia County",
         "county_fips":42101,
         "state_name":"Pennsylvania",
-        "lat":40.0077,
-        "lng":-75.1339,
+        "lat":40.0076,
+        "lng":-75.134,
         "population":1582432
     },
     {
@@ -257,7 +257,7 @@
         "county_fips":36005,
         "state_name":"New York",
         "lat":40.8501,
-        "lng":-73.8672,
+        "lng":-73.8671,
         "population":1419250
     },
     {
@@ -320,7 +320,7 @@
         "county_fips":42003,
         "state_name":"Pennsylvania",
         "lat":40.4688,
-        "lng":-79.9813,
+        "lng":-79.9812,
         "population":1240476
     },
     {
@@ -382,8 +382,8 @@
         "county_full":"Fulton County",
         "county_fips":13121,
         "state_name":"Georgia",
-        "lat":33.7902,
-        "lng":-84.467,
+        "lat":33.7903,
+        "lng":-84.4671,
         "population":1068507
     },
     {
@@ -473,7 +473,7 @@
         "county_fips":13135,
         "state_name":"Georgia",
         "lat":33.9619,
-        "lng":-84.0236,
+        "lng":-84.0235,
         "population":966972
     },
     {
@@ -545,7 +545,7 @@
         "county_fips":53053,
         "state_name":"Washington",
         "lat":47.0239,
-        "lng":-122.104,
+        "lng":-122.1041,
         "population":924106
     },
     {
@@ -958,7 +958,7 @@
         "county_full":"Bucks County",
         "county_fips":42017,
         "state_name":"Pennsylvania",
-        "lat":40.337,
+        "lat":40.3369,
         "lng":-75.1069,
         "population":645993
     },
@@ -1012,7 +1012,7 @@
         "county_full":"Washington County",
         "county_fips":41067,
         "state_name":"Oregon",
-        "lat":45.5601,
+        "lat":45.56,
         "lng":-123.0984,
         "population":600266
     },
@@ -1156,7 +1156,7 @@
         "county_full":"Spokane County",
         "county_fips":53063,
         "state_name":"Washington",
-        "lat":47.6207,
+        "lat":47.6208,
         "lng":-117.404,
         "population":544323
     },
@@ -1229,7 +1229,7 @@
         "county_fips":8001,
         "state_name":"Colorado",
         "lat":39.8736,
-        "lng":-104.3379,
+        "lng":-104.3378,
         "population":524408
     },
     {
@@ -1282,7 +1282,7 @@
         "county_full":"Ada County",
         "county_fips":16001,
         "state_name":"Idaho",
-        "lat":43.4511,
+        "lat":43.4512,
         "lng":-116.2412,
         "population":508052
     },
@@ -1534,8 +1534,8 @@
         "county_full":"Cameron County",
         "county_fips":48061,
         "state_name":"Texas",
-        "lat":26.1332,
-        "lng":-97.5186,
+        "lat":26.1333,
+        "lng":-97.5187,
         "population":423192
     },
     {
@@ -1571,7 +1571,7 @@
         "county_fips":45019,
         "state_name":"South Carolina",
         "lat":32.8348,
-        "lng":-79.953,
+        "lng":-79.9531,
         "population":414711
     },
     {
@@ -1706,7 +1706,7 @@
         "county_fips":37067,
         "state_name":"North Carolina",
         "lat":36.1306,
-        "lng":-80.2563,
+        "lng":-80.2564,
         "population":386740
     },
     {
@@ -1913,7 +1913,7 @@
         "county_fips":34035,
         "state_name":"New Jersey",
         "lat":40.5635,
-        "lng":-74.6164,
+        "lng":-74.6163,
         "population":346203
     },
     {
@@ -1958,7 +1958,7 @@
         "county_fips":51087,
         "state_name":"Virginia",
         "lat":37.538,
-        "lng":-77.4059,
+        "lng":-77.4058,
         "population":334434
     },
     {
@@ -2120,7 +2120,7 @@
         "county_fips":45063,
         "state_name":"South Carolina",
         "lat":33.9023,
-        "lng":-81.2722,
+        "lng":-81.272,
         "population":300370
     },
     {
@@ -2128,7 +2128,7 @@
         "county_full":"Clayton County",
         "county_fips":13063,
         "state_name":"Georgia",
-        "lat":33.542,
+        "lat":33.5419,
         "lng":-84.3576,
         "population":298771
     },
@@ -2227,8 +2227,8 @@
         "county_full":"York County",
         "county_fips":45091,
         "state_name":"South Carolina",
-        "lat":34.9748,
-        "lng":-81.1845,
+        "lat":34.9749,
+        "lng":-81.1844,
         "population":288559
     },
     {
@@ -2282,7 +2282,7 @@
         "county_fips":6079,
         "state_name":"California",
         "lat":35.3871,
-        "lng":-120.4043,
+        "lng":-120.4044,
         "population":281486
     },
     {
@@ -2335,7 +2335,7 @@
         "county_full":"St. Joseph County",
         "county_fips":18141,
         "state_name":"Indiana",
-        "lat":41.6166,
+        "lat":41.6167,
         "lng":-86.2899,
         "population":272574
     },
@@ -2462,7 +2462,7 @@
         "county_fips":13117,
         "state_name":"Georgia",
         "lat":34.2255,
-        "lng":-84.1251,
+        "lng":-84.125,
         "population":260062
     },
     {
@@ -2516,7 +2516,7 @@
         "county_fips":47187,
         "state_name":"Tennessee",
         "lat":35.8938,
-        "lng":-86.8986,
+        "lng":-86.8987,
         "population":254609
     },
     {
@@ -2606,7 +2606,7 @@
         "county_fips":4025,
         "state_name":"Arizona",
         "lat":34.5998,
-        "lng":-112.5537,
+        "lng":-112.5538,
         "population":241656
     },
     {
@@ -2623,7 +2623,7 @@
         "county_full":"Berkeley County",
         "county_fips":45015,
         "state_name":"South Carolina",
-        "lat":33.1973,
+        "lat":33.1971,
         "lng":-79.9522,
         "population":238723
     },
@@ -2993,7 +2993,7 @@
         "county_fips":13139,
         "state_name":"Georgia",
         "lat":34.3171,
-        "lng":-83.8195,
+        "lng":-83.8196,
         "population":208395
     },
     {
@@ -3118,7 +3118,7 @@
         "county_full":"St. Louis County",
         "county_fips":27137,
         "state_name":"Minnesota",
-        "lat":47.6031,
+        "lat":47.6032,
         "lng":-92.4707,
         "population":200056
     },
@@ -3236,7 +3236,7 @@
         "county_fips":49053,
         "state_name":"Utah",
         "lat":37.2804,
-        "lng":-113.5048,
+        "lng":-113.5047,
         "population":189827
     },
     {
@@ -3263,7 +3263,7 @@
         "county_fips":48251,
         "state_name":"Texas",
         "lat":32.379,
-        "lng":-97.3665,
+        "lng":-97.3666,
         "population":188820
     },
     {
@@ -3371,7 +3371,7 @@
         "county_fips":17143,
         "state_name":"Illinois",
         "lat":40.788,
-        "lng":-89.7601,
+        "lng":-89.76,
         "population":179831
     },
     {
@@ -3487,7 +3487,7 @@
         "county_full":"Paulding County",
         "county_fips":13223,
         "state_name":"Georgia",
-        "lat":33.9206,
+        "lat":33.9205,
         "lng":-84.8673,
         "population":174292
     },
@@ -3523,7 +3523,7 @@
         "county_full":"Aiken County",
         "county_fips":45003,
         "state_name":"South Carolina",
-        "lat":33.5443,
+        "lat":33.5442,
         "lng":-81.6347,
         "population":171949
     },
@@ -3551,7 +3551,7 @@
         "county_fips":37057,
         "state_name":"North Carolina",
         "lat":35.7933,
-        "lng":-80.2128,
+        "lng":-80.2127,
         "population":171063
     },
     {
@@ -3856,7 +3856,7 @@
         "county_full":"Stearns County",
         "county_fips":27145,
         "state_name":"Minnesota",
-        "lat":45.5522,
+        "lat":45.5521,
         "lng":-94.6131,
         "population":159358
     },
@@ -4072,7 +4072,7 @@
         "county_full":"Coweta County",
         "county_fips":13077,
         "state_name":"Georgia",
-        "lat":33.3534,
+        "lat":33.3533,
         "lng":-84.7634,
         "population":150071
     },
@@ -4738,7 +4738,7 @@
         "county_full":"Fayette County",
         "county_fips":13113,
         "state_name":"Georgia",
-        "lat":33.4139,
+        "lat":33.414,
         "lng":-84.4943,
         "population":120689
     },
@@ -4873,7 +4873,7 @@
         "county_full":"Jefferson County",
         "county_fips":36045,
         "state_name":"New York",
-        "lat":44.0496,
+        "lat":44.0495,
         "lng":-75.9203,
         "population":116130
     },
@@ -4937,7 +4937,7 @@
         "county_fips":23001,
         "state_name":"Maine",
         "lat":44.1658,
-        "lng":-70.2064,
+        "lng":-70.2065,
         "population":112323
     },
     {
@@ -5252,7 +5252,7 @@
         "county_fips":42001,
         "state_name":"Pennsylvania",
         "lat":39.8715,
-        "lng":-77.2178,
+        "lng":-77.2179,
         "population":105183
     },
     {
@@ -5441,7 +5441,7 @@
         "county_fips":45057,
         "state_name":"South Carolina",
         "lat":34.6867,
-        "lng":-80.7054,
+        "lng":-80.7055,
         "population":100905
     },
     {
@@ -6133,7 +6133,7 @@
         "county_full":"Cascade County",
         "county_fips":30013,
         "state_name":"Montana",
-        "lat":47.308,
+        "lat":47.3079,
         "lng":-111.347,
         "population":84601
     },
@@ -6332,7 +6332,7 @@
         "county_fips":18059,
         "state_name":"Indiana",
         "lat":39.8236,
-        "lng":-85.7732,
+        "lng":-85.7733,
         "population":82013
     },
     {
@@ -6340,7 +6340,7 @@
         "county_full":"Monroe County",
         "county_fips":12087,
         "state_name":"Florida",
-        "lat":25.3192,
+        "lat":25.3191,
         "lng":-81.1089,
         "population":81840
     },
@@ -6385,8 +6385,8 @@
         "county_full":"Jackson County",
         "county_fips":13157,
         "state_name":"Georgia",
-        "lat":34.1339,
-        "lng":-83.5664,
+        "lat":34.134,
+        "lng":-83.5665,
         "population":80640
     },
     {
@@ -6493,8 +6493,8 @@
         "county_full":"Lynchburg City",
         "county_fips":51680,
         "state_name":"Virginia",
-        "lat":37.4003,
-        "lng":-79.1909,
+        "lat":37.4004,
+        "lng":-79.1908,
         "population":79255
     },
     {
@@ -6575,7 +6575,7 @@
         "county_fips":51015,
         "state_name":"Virginia",
         "lat":38.1644,
-        "lng":-79.1339,
+        "lng":-79.1338,
         "population":77713
     },
     {
@@ -6602,7 +6602,7 @@
         "county_fips":35061,
         "state_name":"New Mexico",
         "lat":34.7155,
-        "lng":-106.809,
+        "lng":-106.8091,
         "population":77382
     },
     {
@@ -6754,7 +6754,7 @@
         "county_full":"Raleigh County",
         "county_fips":54081,
         "state_name":"West Virginia",
-        "lat":37.7714,
+        "lat":37.7713,
         "lng":-81.2487,
         "population":73666
     },
@@ -6845,7 +6845,7 @@
         "county_fips":30049,
         "state_name":"Montana",
         "lat":47.1224,
-        "lng":-112.3904,
+        "lng":-112.3905,
         "population":72580
     },
     {
@@ -6863,7 +6863,7 @@
         "county_fips":40037,
         "state_name":"Oklahoma",
         "lat":35.9026,
-        "lng":-96.3708,
+        "lng":-96.3709,
         "population":72353
     },
     {
@@ -6881,7 +6881,7 @@
         "county_fips":28075,
         "state_name":"Mississippi",
         "lat":32.4043,
-        "lng":-88.6625,
+        "lng":-88.6626,
         "population":71984
     },
     {
@@ -6889,7 +6889,7 @@
         "county_full":"Franklin County",
         "county_fips":37069,
         "state_name":"North Carolina",
-        "lat":36.0828,
+        "lat":36.0827,
         "lng":-78.2857,
         "population":71962
     },
@@ -7132,8 +7132,8 @@
         "county_full":"Butler County",
         "county_fips":20015,
         "state_name":"Kansas",
-        "lat":37.7812,
-        "lng":-96.839,
+        "lat":37.7813,
+        "lng":-96.8391,
         "population":67916
     },
     {
@@ -7250,7 +7250,7 @@
         "county_fips":29187,
         "state_name":"Missouri",
         "lat":37.8103,
-        "lng":-90.4723,
+        "lng":-90.4722,
         "population":66864
     },
     {
@@ -7308,21 +7308,21 @@
         "population":66430
     },
     {
-        "county":"Wayne",
-        "county_full":"Wayne County",
-        "county_fips":18177,
-        "state_name":"Indiana",
-        "lat":39.8644,
-        "lng":-85.0099,
-        "population":66377
-    },
-    {
         "county":"Grant",
         "county_full":"Grant County",
         "county_fips":18053,
         "state_name":"Indiana",
         "lat":40.5158,
         "lng":-85.6547,
+        "population":66377
+    },
+    {
+        "county":"Wayne",
+        "county_full":"Wayne County",
+        "county_fips":18177,
+        "state_name":"Indiana",
+        "lat":39.8644,
+        "lng":-85.0099,
         "population":66377
     },
     {
@@ -7907,7 +7907,7 @@
         "county_fips":50023,
         "state_name":"Vermont",
         "lat":44.2736,
-        "lng":-72.6148,
+        "lng":-72.6147,
         "population":59958
     },
     {
@@ -8050,8 +8050,8 @@
         "county_full":"Sandusky County",
         "county_fips":39143,
         "state_name":"Ohio",
-        "lat":41.3561,
-        "lng":-83.1465,
+        "lat":41.3562,
+        "lng":-83.1464,
         "population":58770
     },
     {
@@ -8258,7 +8258,7 @@
         "county_fips":28071,
         "state_name":"Mississippi",
         "lat":34.3568,
-        "lng":-89.4849,
+        "lng":-89.485,
         "population":56920
     },
     {
@@ -8356,7 +8356,7 @@
         "county_full":"Campbell County",
         "county_fips":51031,
         "state_name":"Virginia",
-        "lat":37.2053,
+        "lat":37.2054,
         "lng":-79.0966,
         "population":55398
     },
@@ -8464,7 +8464,7 @@
         "county_full":"McMinn County",
         "county_fips":47107,
         "state_name":"Tennessee",
-        "lat":35.4248,
+        "lat":35.4247,
         "lng":-84.6175,
         "population":54135
     },
@@ -8482,7 +8482,7 @@
         "county_full":"Elko County",
         "county_fips":32007,
         "state_name":"Nevada",
-        "lat":41.1458,
+        "lat":41.1457,
         "lng":-115.3577,
         "population":53852
     },
@@ -8581,8 +8581,8 @@
         "county_full":"Nye County",
         "county_fips":32023,
         "state_name":"Nevada",
-        "lat":38.0422,
-        "lng":-116.4718,
+        "lat":38.0423,
+        "lng":-116.4719,
         "population":53207
     },
     {
@@ -8645,7 +8645,7 @@
         "county_fips":1071,
         "state_name":"Alabama",
         "lat":34.7795,
-        "lng":-85.9994,
+        "lng":-85.9993,
         "population":52839
     },
     {
@@ -8761,8 +8761,8 @@
         "county_full":"Franklin County",
         "county_fips":21073,
         "state_name":"Kentucky",
-        "lat":38.2392,
-        "lng":-84.877,
+        "lat":38.2391,
+        "lng":-84.8771,
         "population":51563
     },
     {
@@ -8806,7 +8806,7 @@
         "county_full":"Oktibbeha County",
         "county_fips":28105,
         "state_name":"Mississippi",
-        "lat":33.4249,
+        "lat":33.425,
         "lng":-88.8793,
         "population":51473
     },
@@ -9166,7 +9166,7 @@
         "county_full":"Santa Cruz County",
         "county_fips":4023,
         "state_name":"Arizona",
-        "lat":31.526,
+        "lat":31.5259,
         "lng":-110.8465,
         "population":48209
     },
@@ -9410,7 +9410,7 @@
         "county_fips":17029,
         "state_name":"Illinois",
         "lat":39.5203,
-        "lng":-88.2218,
+        "lng":-88.2217,
         "population":46689
     },
     {
@@ -9437,7 +9437,7 @@
         "county_fips":27007,
         "state_name":"Minnesota",
         "lat":47.9738,
-        "lng":-94.9377,
+        "lng":-94.9376,
         "population":46421
     },
     {
@@ -9689,7 +9689,7 @@
         "county_fips":18093,
         "state_name":"Indiana",
         "lat":38.8412,
-        "lng":-86.4835,
+        "lng":-86.4834,
         "population":45077
     },
     {
@@ -9715,7 +9715,7 @@
         "county_full":"Lawrence County",
         "county_fips":47099,
         "state_name":"Tennessee",
-        "lat":35.2173,
+        "lat":35.2174,
         "lng":-87.3956,
         "population":44901
     },
@@ -9734,7 +9734,7 @@
         "county_fips":53037,
         "state_name":"Washington",
         "lat":47.1244,
-        "lng":-120.6798,
+        "lng":-120.6799,
         "population":44736
     },
     {
@@ -9761,7 +9761,7 @@
         "county_fips":51171,
         "state_name":"Virginia",
         "lat":38.8583,
-        "lng":-78.5708,
+        "lng":-78.5709,
         "population":44630
     },
     {
@@ -9860,7 +9860,7 @@
         "county_fips":39097,
         "state_name":"Ohio",
         "lat":39.8942,
-        "lng":-83.4005,
+        "lng":-83.4004,
         "population":44126
     },
     {
@@ -9959,7 +9959,7 @@
         "county_fips":13009,
         "state_name":"Georgia",
         "lat":33.0693,
-        "lng":-83.2495,
+        "lng":-83.2496,
         "population":43669
     },
     {
@@ -9968,7 +9968,7 @@
         "county_fips":12039,
         "state_name":"Florida",
         "lat":30.5795,
-        "lng":-84.6136,
+        "lng":-84.6137,
         "population":43642
     },
     {
@@ -10039,8 +10039,8 @@
         "county_full":"Franklin County",
         "county_fips":47051,
         "state_name":"Tennessee",
-        "lat":35.1551,
-        "lng":-86.0922,
+        "lat":35.1556,
+        "lng":-86.0937,
         "population":43478
     },
     {
@@ -10193,7 +10193,7 @@
         "county_fips":51683,
         "state_name":"Virginia",
         "lat":38.7479,
-        "lng":-77.4838,
+        "lng":-77.4839,
         "population":42674
     },
     {
@@ -10202,7 +10202,7 @@
         "county_fips":47047,
         "state_name":"Tennessee",
         "lat":35.197,
-        "lng":-89.4141,
+        "lng":-89.4142,
         "population":42653
     },
     {
@@ -10283,7 +10283,7 @@
         "county_fips":51590,
         "state_name":"Virginia",
         "lat":36.5831,
-        "lng":-79.4088,
+        "lng":-79.4087,
         "population":42239
     },
     {
@@ -10427,7 +10427,7 @@
         "county_fips":22095,
         "state_name":"Louisiana",
         "lat":30.1264,
-        "lng":-90.4709,
+        "lng":-90.471,
         "population":41342
     },
     {
@@ -10499,7 +10499,7 @@
         "county_fips":23013,
         "state_name":"Maine",
         "lat":44.141,
-        "lng":-69.1686,
+        "lng":-69.1687,
         "population":40860
     },
     {
@@ -10633,8 +10633,8 @@
         "county_full":"Waldo County",
         "county_fips":23027,
         "state_name":"Maine",
-        "lat":44.5028,
-        "lng":-69.1454,
+        "lat":44.5026,
+        "lng":-69.1453,
         "population":40006
     },
     {
@@ -10642,8 +10642,8 @@
         "county_full":"Fayette County",
         "county_fips":54019,
         "state_name":"West Virginia",
-        "lat":38.0288,
-        "lng":-81.0811,
+        "lat":38.0287,
+        "lng":-81.0812,
         "population":39987
     },
     {
@@ -10678,7 +10678,7 @@
         "county_full":"Pike County",
         "county_fips":28113,
         "state_name":"Mississippi",
-        "lat":31.1748,
+        "lat":31.1749,
         "lng":-90.4042,
         "population":39930
     },
@@ -10876,8 +10876,8 @@
         "county_full":"Colleton County",
         "county_fips":45029,
         "state_name":"South Carolina",
-        "lat":32.8637,
-        "lng":-80.667,
+        "lat":32.8638,
+        "lng":-80.6671,
         "population":38623
     },
     {
@@ -11074,7 +11074,7 @@
         "county_full":"Albany County",
         "county_fips":56001,
         "state_name":"Wyoming",
-        "lat":41.6546,
+        "lat":41.6545,
         "lng":-105.7238,
         "population":37713
     },
@@ -11192,7 +11192,7 @@
         "county_fips":48223,
         "state_name":"Texas",
         "lat":33.1496,
-        "lng":-95.5639,
+        "lng":-95.564,
         "population":37351
     },
     {
@@ -11380,7 +11380,7 @@
         "county_full":"Escambia County",
         "county_fips":1053,
         "state_name":"Alabama",
-        "lat":31.1262,
+        "lat":31.1261,
         "lng":-87.1615,
         "population":36695
     },
@@ -11677,7 +11677,7 @@
         "county_full":"Perry County",
         "county_fips":39127,
         "state_name":"Ohio",
-        "lat":39.7372,
+        "lat":39.7371,
         "lng":-82.2361,
         "population":35474
     },
@@ -11785,7 +11785,7 @@
         "county_full":"DeSoto County",
         "county_fips":12027,
         "state_name":"Florida",
-        "lat":27.1864,
+        "lat":27.1863,
         "lng":-81.8095,
         "population":34719
     },
@@ -12011,7 +12011,7 @@
         "county_fips":51023,
         "state_name":"Virginia",
         "lat":37.5571,
-        "lng":-79.8124,
+        "lng":-79.8123,
         "population":33875
     },
     {
@@ -12109,8 +12109,8 @@
         "county_full":"Lee County",
         "county_fips":13177,
         "state_name":"Georgia",
-        "lat":31.7796,
-        "lng":-84.1412,
+        "lat":31.7795,
+        "lng":-84.1411,
         "population":33337
     },
     {
@@ -12208,7 +12208,7 @@
         "county_full":"Seneca County",
         "county_fips":36099,
         "state_name":"New York",
-        "lat":42.7811,
+        "lat":42.781,
         "lng":-76.8238,
         "population":33125
     },
@@ -12236,7 +12236,7 @@
         "county_fips":17011,
         "state_name":"Illinois",
         "lat":41.4041,
-        "lng":-89.5287,
+        "lng":-89.5286,
         "population":33027
     },
     {
@@ -12254,7 +12254,7 @@
         "county_fips":29107,
         "state_name":"Missouri",
         "lat":39.0655,
-        "lng":-93.7855,
+        "lng":-93.7854,
         "population":32974
     },
     {
@@ -12326,7 +12326,7 @@
         "county_fips":24019,
         "state_name":"Maryland",
         "lat":38.4829,
-        "lng":-76.0126,
+        "lng":-76.0125,
         "population":32612
     },
     {
@@ -12334,7 +12334,7 @@
         "county_full":"Jackson County",
         "county_fips":39079,
         "state_name":"Ohio",
-        "lat":39.0196,
+        "lat":39.0197,
         "lng":-82.6184,
         "population":32588
     },
@@ -12379,8 +12379,8 @@
         "county_full":"Chester County",
         "county_fips":45023,
         "state_name":"South Carolina",
-        "lat":34.692,
-        "lng":-81.1595,
+        "lat":34.6921,
+        "lng":-81.1597,
         "population":32177
     },
     {
@@ -12389,7 +12389,7 @@
         "county_fips":22039,
         "state_name":"Louisiana",
         "lat":30.7289,
-        "lng":-92.4059,
+        "lng":-92.406,
         "population":32162
     },
     {
@@ -12451,8 +12451,8 @@
         "county_full":"Juneau City and Borough",
         "county_fips":2110,
         "state_name":"Alaska",
-        "lat":58.4546,
-        "lng":-134.1733,
+        "lat":58.455,
+        "lng":-134.1734,
         "population":31969
     },
     {
@@ -12479,7 +12479,7 @@
         "county_fips":41045,
         "state_name":"Oregon",
         "lat":43.1934,
-        "lng":-117.6232,
+        "lng":-117.6231,
         "population":31701
     },
     {
@@ -12726,21 +12726,21 @@
         "population":30720
     },
     {
-        "county":"Muhlenberg",
-        "county_full":"Muhlenberg County",
-        "county_fips":21177,
-        "state_name":"Kentucky",
-        "lat":37.2158,
-        "lng":-87.142,
-        "population":30712
-    },
-    {
         "county":"Austin",
         "county_full":"Austin County",
         "county_fips":48015,
         "state_name":"Texas",
         "lat":29.887,
         "lng":-96.2779,
+        "population":30712
+    },
+    {
+        "county":"Muhlenberg",
+        "county_full":"Muhlenberg County",
+        "county_fips":21177,
+        "state_name":"Kentucky",
+        "lat":37.2158,
+        "lng":-87.142,
         "population":30712
     },
     {
@@ -12893,7 +12893,7 @@
         "county_fips":28011,
         "state_name":"Mississippi",
         "lat":33.7971,
-        "lng":-90.8805,
+        "lng":-90.8806,
         "population":30163
     },
     {
@@ -13054,7 +13054,7 @@
         "county_full":"Morgan County",
         "county_fips":8087,
         "state_name":"Colorado",
-        "lat":40.2627,
+        "lat":40.2626,
         "lng":-103.8097,
         "population":29186
     },
@@ -13135,8 +13135,8 @@
         "county_full":"Marion County",
         "county_fips":47115,
         "state_name":"Tennessee",
-        "lat":35.1293,
-        "lng":-85.6221,
+        "lat":35.1289,
+        "lng":-85.6239,
         "population":29010
     },
     {
@@ -13144,8 +13144,8 @@
         "county_full":"Le Sueur County",
         "county_fips":27079,
         "state_name":"Minnesota",
-        "lat":44.3714,
-        "lng":-93.7301,
+        "lat":44.3715,
+        "lng":-93.7302,
         "population":28936
     },
     {
@@ -13423,7 +13423,7 @@
         "county_full":"Dinwiddie County",
         "county_fips":51053,
         "state_name":"Virginia",
-        "lat":37.0759,
+        "lat":37.076,
         "lng":-77.6323,
         "population":28083
     },
@@ -13459,7 +13459,7 @@
         "county_full":"Copiah County",
         "county_fips":28029,
         "state_name":"Mississippi",
-        "lat":31.8692,
+        "lat":31.8693,
         "lng":-90.4488,
         "population":27994
     },
@@ -13487,7 +13487,7 @@
         "county_fips":39073,
         "state_name":"Ohio",
         "lat":39.4971,
-        "lng":-82.4792,
+        "lng":-82.4793,
         "population":27938
     },
     {
@@ -13505,7 +13505,7 @@
         "county_fips":12007,
         "state_name":"Florida",
         "lat":29.95,
-        "lng":-82.1687,
+        "lng":-82.1688,
         "population":27888
     },
     {
@@ -13558,7 +13558,7 @@
         "county_full":"Randolph County",
         "county_fips":54083,
         "state_name":"West Virginia",
-        "lat":38.7748,
+        "lat":38.7747,
         "lng":-79.8758,
         "population":27782
     },
@@ -13594,7 +13594,7 @@
         "county_full":"Jackson County",
         "county_fips":54035,
         "state_name":"West Virginia",
-        "lat":38.8344,
+        "lat":38.8345,
         "lng":-81.6748,
         "population":27753
     },
@@ -13622,7 +13622,7 @@
         "county_fips":18079,
         "state_name":"Indiana",
         "lat":38.9969,
-        "lng":-85.6281,
+        "lng":-85.628,
         "population":27584
     },
     {
@@ -13657,7 +13657,7 @@
         "county_full":"Tillamook County",
         "county_fips":41057,
         "state_name":"Oregon",
-        "lat":45.4636,
+        "lat":45.4637,
         "lng":-123.7126,
         "population":27471
     },
@@ -13730,7 +13730,7 @@
         "county_fips":35006,
         "state_name":"New Mexico",
         "lat":34.9125,
-        "lng":-107.9998,
+        "lng":-107.9997,
         "population":27059
     },
     {
@@ -13757,7 +13757,7 @@
         "county_fips":45087,
         "state_name":"South Carolina",
         "lat":34.6895,
-        "lng":-81.6191,
+        "lng":-81.6192,
         "population":26990
     },
     {
@@ -13838,7 +13838,7 @@
         "county_fips":37009,
         "state_name":"North Carolina",
         "lat":36.4341,
-        "lng":-81.5004,
+        "lng":-81.5003,
         "population":26831
     },
     {
@@ -13873,7 +13873,7 @@
         "county_full":"Geneva County",
         "county_fips":1061,
         "state_name":"Alabama",
-        "lat":31.0951,
+        "lat":31.095,
         "lng":-85.8391,
         "population":26726
     },
@@ -13909,8 +13909,8 @@
         "county_full":"Lewis County",
         "county_fips":36049,
         "state_name":"New York",
-        "lat":43.7851,
-        "lng":-75.4486,
+        "lat":43.785,
+        "lng":-75.4487,
         "population":26618
     },
     {
@@ -14494,7 +14494,7 @@
         "county_full":"Routt County",
         "county_fips":8107,
         "state_name":"Colorado",
-        "lat":40.4851,
+        "lat":40.4852,
         "lng":-106.9913,
         "population":24990
     },
@@ -14674,7 +14674,7 @@
         "county_full":"Randolph County",
         "county_fips":29175,
         "state_name":"Missouri",
-        "lat":39.4401,
+        "lat":39.4402,
         "lng":-92.4971,
         "population":24524
     },
@@ -14877,21 +14877,21 @@
         "population":23758
     },
     {
-        "county":"Page",
-        "county_full":"Page County",
-        "county_fips":51139,
-        "state_name":"Virginia",
-        "lat":38.6194,
-        "lng":-78.4844,
-        "population":23750
-    },
-    {
         "county":"Pacific",
         "county_full":"Pacific County",
         "county_fips":53049,
         "state_name":"Washington",
         "lat":46.5556,
         "lng":-123.7039,
+        "population":23750
+    },
+    {
+        "county":"Page",
+        "county_full":"Page County",
+        "county_fips":51139,
+        "state_name":"Virginia",
+        "lat":38.6194,
+        "lng":-78.4844,
         "population":23750
     },
     {
@@ -14963,7 +14963,7 @@
         "county_fips":27093,
         "state_name":"Minnesota",
         "lat":45.1231,
-        "lng":-94.5273,
+        "lng":-94.5274,
         "population":23422
     },
     {
@@ -15174,21 +15174,21 @@
         "population":22761
     },
     {
-        "county":"Poinsett",
-        "county_full":"Poinsett County",
-        "county_fips":5111,
-        "state_name":"Arkansas",
-        "lat":35.574,
-        "lng":-90.663,
-        "population":22740
-    },
-    {
         "county":"St. Francis",
         "county_full":"St. Francis County",
         "county_fips":5123,
         "state_name":"Arkansas",
         "lat":35.022,
         "lng":-90.7478,
+        "population":22740
+    },
+    {
+        "county":"Poinsett",
+        "county_full":"Poinsett County",
+        "county_fips":5111,
+        "state_name":"Arkansas",
+        "lat":35.574,
+        "lng":-90.663,
         "population":22740
     },
     {
@@ -15241,7 +15241,7 @@
         "county_full":"Allen Parish",
         "county_fips":22003,
         "state_name":"Louisiana",
-        "lat":30.653,
+        "lat":30.6529,
         "lng":-92.828,
         "population":22552
     },
@@ -15386,7 +15386,7 @@
         "county_fips":39105,
         "state_name":"Ohio",
         "lat":39.0822,
-        "lng":-82.0228,
+        "lng":-82.0229,
         "population":22072
     },
     {
@@ -15530,7 +15530,7 @@
         "county_fips":27057,
         "state_name":"Minnesota",
         "lat":47.1086,
-        "lng":-94.9166,
+        "lng":-94.9167,
         "population":21700
     },
     {
@@ -15718,7 +15718,7 @@
         "county_full":"Dakota County",
         "county_fips":31043,
         "state_name":"Nebraska",
-        "lat":42.3912,
+        "lat":42.3911,
         "lng":-96.5646,
         "population":21331
     },
@@ -15836,7 +15836,7 @@
         "county_fips":55053,
         "state_name":"Wisconsin",
         "lat":44.3192,
-        "lng":-90.8052,
+        "lng":-90.8053,
         "population":20971
     },
     {
@@ -15871,7 +15871,7 @@
         "county_full":"Adams County",
         "county_fips":55001,
         "state_name":"Wisconsin",
-        "lat":43.9696,
+        "lat":43.9695,
         "lng":-89.7704,
         "population":20928
     },
@@ -16268,7 +16268,7 @@
         "county_fips":21017,
         "state_name":"Kentucky",
         "lat":38.2067,
-        "lng":-84.2171,
+        "lng":-84.2172,
         "population":20174
     },
     {
@@ -16335,21 +16335,21 @@
         "population":19995
     },
     {
-        "county":"Winneshiek",
-        "county_full":"Winneshiek County",
-        "county_fips":19191,
-        "state_name":"Iowa",
-        "lat":43.2907,
-        "lng":-91.8437,
-        "population":19972
-    },
-    {
         "county":"Taylor",
         "county_full":"Taylor County",
         "county_fips":55119,
         "state_name":"Wisconsin",
         "lat":45.2116,
         "lng":-90.5012,
+        "population":19972
+    },
+    {
+        "county":"Winneshiek",
+        "county_full":"Winneshiek County",
+        "county_fips":19191,
+        "state_name":"Iowa",
+        "lat":43.2907,
+        "lng":-91.8437,
         "population":19972
     },
     {
@@ -16493,7 +16493,7 @@
         "county_fips":48123,
         "state_name":"Texas",
         "lat":29.0821,
-        "lng":-97.3568,
+        "lng":-97.3567,
         "population":19853
     },
     {
@@ -16547,7 +16547,7 @@
         "county_fips":18117,
         "state_name":"Indiana",
         "lat":38.5418,
-        "lng":-86.4951,
+        "lng":-86.495,
         "population":19746
     },
     {
@@ -16848,21 +16848,21 @@
         "population":18971
     },
     {
-        "county":"Saluda",
-        "county_full":"Saluda County",
-        "county_fips":45081,
-        "state_name":"South Carolina",
-        "lat":34.0061,
-        "lng":-81.7268,
-        "population":18958
-    },
-    {
         "county":"Waseca",
         "county_full":"Waseca County",
         "county_fips":27161,
         "state_name":"Minnesota",
         "lat":44.0221,
         "lng":-93.5873,
+        "population":18958
+    },
+    {
+        "county":"Saluda",
+        "county_full":"Saluda County",
+        "county_fips":45081,
+        "state_name":"South Carolina",
+        "lat":34.006,
+        "lng":-81.7266,
         "population":18958
     },
     {
@@ -17041,7 +17041,7 @@
         "county_full":"Ste. Genevieve County",
         "county_fips":29186,
         "state_name":"Missouri",
-        "lat":37.8944,
+        "lat":37.8945,
         "lng":-90.1944,
         "population":18551
     },
@@ -17104,7 +17104,7 @@
         "county_full":"Clay County",
         "county_fips":28025,
         "state_name":"Mississippi",
-        "lat":33.6556,
+        "lat":33.6557,
         "lng":-88.7816,
         "population":18462
     },
@@ -17204,7 +17204,7 @@
         "county_fips":55113,
         "state_name":"Wisconsin",
         "lat":45.88,
-        "lng":-91.1445,
+        "lng":-91.1446,
         "population":18243
     },
     {
@@ -17330,7 +17330,7 @@
         "county_fips":51175,
         "state_name":"Virginia",
         "lat":36.7204,
-        "lng":-77.1061,
+        "lng":-77.1062,
         "population":17988
     },
     {
@@ -17501,7 +17501,7 @@
         "county_fips":13183,
         "state_name":"Georgia",
         "lat":31.7526,
-        "lng":-81.7458,
+        "lng":-81.7457,
         "population":17512
     },
     {
@@ -17653,7 +17653,7 @@
         "county_full":"Piscataquis County",
         "county_fips":23021,
         "state_name":"Maine",
-        "lat":45.8374,
+        "lat":45.8373,
         "lng":-69.2846,
         "population":17125
     },
@@ -18121,7 +18121,7 @@
         "county_full":"Socorro County",
         "county_fips":35053,
         "state_name":"New Mexico",
-        "lat":34.0072,
+        "lat":34.0071,
         "lng":-106.9302,
         "population":16308
     },
@@ -18185,17 +18185,8 @@
         "county_fips":47181,
         "state_name":"Tennessee",
         "lat":35.2399,
-        "lng":-87.7881,
+        "lng":-87.788,
         "population":16251
-    },
-    {
-        "county":"Jasper",
-        "county_full":"Jasper County",
-        "county_fips":28061,
-        "state_name":"Mississippi",
-        "lat":32.0191,
-        "lng":-89.1189,
-        "population":16211
     },
     {
         "county":"Atchison",
@@ -18204,6 +18195,15 @@
         "state_name":"Kansas",
         "lat":39.5318,
         "lng":-95.3135,
+        "population":16211
+    },
+    {
+        "county":"Jasper",
+        "county_full":"Jasper County",
+        "county_fips":28061,
+        "state_name":"Mississippi",
+        "lat":32.0191,
+        "lng":-89.1189,
         "population":16211
     },
     {
@@ -18491,7 +18491,7 @@
         "county_fips":51135,
         "state_name":"Virginia",
         "lat":37.143,
-        "lng":-78.0513,
+        "lng":-78.0512,
         "population":15597
     },
     {
@@ -18832,8 +18832,8 @@
         "county_full":"Jackson Parish",
         "county_fips":22049,
         "state_name":"Louisiana",
-        "lat":32.302,
-        "lng":-92.5578,
+        "lat":32.3021,
+        "lng":-92.5579,
         "population":14939
     },
     {
@@ -19040,7 +19040,7 @@
         "county_fips":56007,
         "state_name":"Wyoming",
         "lat":41.6944,
-        "lng":-106.9306,
+        "lng":-106.9305,
         "population":14549
     },
     {
@@ -19084,7 +19084,7 @@
         "county_full":"Cedar County",
         "county_fips":29039,
         "state_name":"Missouri",
-        "lat":37.7239,
+        "lat":37.7238,
         "lng":-93.8566,
         "population":14440
     },
@@ -19112,7 +19112,7 @@
         "county_fips":8071,
         "state_name":"Colorado",
         "lat":37.3158,
-        "lng":-104.0386,
+        "lng":-104.0387,
         "population":14392
     },
     {
@@ -19139,7 +19139,7 @@
         "county_fips":29117,
         "state_name":"Missouri",
         "lat":39.7821,
-        "lng":-93.5482,
+        "lng":-93.5483,
         "population":14330
     },
     {
@@ -19192,8 +19192,8 @@
         "county_full":"Noble County",
         "county_fips":39121,
         "state_name":"Ohio",
-        "lat":39.7659,
-        "lng":-81.4556,
+        "lat":39.766,
+        "lng":-81.4555,
         "population":14252
     },
     {
@@ -19228,7 +19228,7 @@
         "county_full":"Craig County",
         "county_fips":40035,
         "state_name":"Oklahoma",
-        "lat":36.7617,
+        "lat":36.7618,
         "lng":-95.2085,
         "population":14215
     },
@@ -19273,7 +19273,7 @@
         "county_full":"Rusk County",
         "county_fips":55107,
         "state_name":"Wisconsin",
-        "lat":45.4752,
+        "lat":45.4751,
         "lng":-91.1332,
         "population":14146
     },
@@ -19467,21 +19467,21 @@
         "population":13864
     },
     {
-        "county":"Newton",
-        "county_full":"Newton County",
-        "county_fips":18111,
-        "state_name":"Indiana",
-        "lat":40.9558,
-        "lng":-87.3976,
-        "population":13859
-    },
-    {
         "county":"Stewart",
         "county_full":"Stewart County",
         "county_fips":47161,
         "state_name":"Tennessee",
         "lat":36.5012,
         "lng":-87.8384,
+        "population":13859
+    },
+    {
+        "county":"Newton",
+        "county_full":"Newton County",
+        "county_fips":18111,
+        "state_name":"Indiana",
+        "lat":40.9558,
+        "lng":-87.3976,
         "population":13859
     },
     {
@@ -19526,7 +19526,7 @@
         "county_fips":1075,
         "state_name":"Alabama",
         "lat":33.7791,
-        "lng":-88.097,
+        "lng":-88.0969,
         "population":13809
     },
     {
@@ -19642,8 +19642,8 @@
         "county_full":"Oglala Lakota County",
         "county_fips":46102,
         "state_name":"South Dakota",
-        "lat":43.3356,
-        "lng":-102.5517,
+        "lat":43.3355,
+        "lng":-102.5516,
         "population":13587
     },
     {
@@ -19678,8 +19678,8 @@
         "county_full":"Winn Parish",
         "county_fips":22127,
         "state_name":"Louisiana",
-        "lat":31.9442,
-        "lng":-92.6369,
+        "lat":31.9443,
+        "lng":-92.6368,
         "population":13506
     },
     {
@@ -20092,7 +20092,7 @@
         "county_full":"Madison County",
         "county_fips":29123,
         "state_name":"Missouri",
-        "lat":37.478,
+        "lat":37.4781,
         "lng":-90.345,
         "population":12665
     },
@@ -20111,7 +20111,7 @@
         "county_fips":21033,
         "state_name":"Kentucky",
         "lat":37.1454,
-        "lng":-87.8679,
+        "lng":-87.8678,
         "population":12631
     },
     {
@@ -20227,7 +20227,7 @@
         "county_full":"Bleckley County",
         "county_fips":13023,
         "state_name":"Georgia",
-        "lat":32.4345,
+        "lat":32.4344,
         "lng":-83.3278,
         "population":12414
     },
@@ -20646,21 +20646,21 @@
         "population":11868
     },
     {
-        "county":"Linn",
-        "county_full":"Linn County",
-        "county_fips":29115,
-        "state_name":"Missouri",
-        "lat":39.8702,
-        "lng":-93.1072,
-        "population":11850
-    },
-    {
         "county":"Douglas",
         "county_full":"Douglas County",
         "county_fips":29067,
         "state_name":"Missouri",
         "lat":36.9326,
         "lng":-92.4988,
+        "population":11850
+    },
+    {
+        "county":"Linn",
+        "county_full":"Linn County",
+        "county_fips":29115,
+        "state_name":"Missouri",
+        "lat":39.8702,
+        "lng":-93.1072,
         "population":11850
     },
     {
@@ -20884,7 +20884,7 @@
         "county_full":"Conecuh County",
         "county_fips":1035,
         "state_name":"Alabama",
-        "lat":31.4293,
+        "lat":31.4292,
         "lng":-86.9937,
         "population":11411
     },
@@ -20934,21 +20934,21 @@
         "population":11318
     },
     {
-        "county":"Greensville",
-        "county_full":"Greensville County",
-        "county_fips":51081,
-        "state_name":"Virginia",
-        "lat":36.6759,
-        "lng":-77.5596,
-        "population":11304
-    },
-    {
         "county":"Okfuskee",
         "county_full":"Okfuskee County",
         "county_fips":40107,
         "state_name":"Oklahoma",
         "lat":35.4655,
         "lng":-96.3228,
+        "population":11304
+    },
+    {
+        "county":"Greensville",
+        "county_full":"Greensville County",
+        "county_fips":51081,
+        "state_name":"Virginia",
+        "lat":36.6759,
+        "lng":-77.5596,
         "population":11304
     },
     {
@@ -21208,7 +21208,7 @@
         "county_full":"St. Helena Parish",
         "county_fips":22091,
         "state_name":"Louisiana",
-        "lat":30.822,
+        "lat":30.8219,
         "lng":-90.7103,
         "population":10849
     },
@@ -21262,7 +21262,7 @@
         "county_full":"Box Butte County",
         "county_fips":31013,
         "state_name":"Nebraska",
-        "lat":42.2198,
+        "lat":42.2197,
         "lng":-103.0857,
         "population":10754
     },
@@ -21272,7 +21272,7 @@
         "county_fips":37029,
         "state_name":"North Carolina",
         "lat":36.3891,
-        "lng":-76.208,
+        "lng":-76.2079,
         "population":10743
     },
     {
@@ -21308,7 +21308,7 @@
         "county_fips":13099,
         "state_name":"Georgia",
         "lat":31.3228,
-        "lng":-84.9037,
+        "lng":-84.9036,
         "population":10683
     },
     {
@@ -21380,7 +21380,7 @@
         "county_fips":31041,
         "state_name":"Nebraska",
         "lat":41.3943,
-        "lng":-99.7261,
+        "lng":-99.7262,
         "population":10544
     },
     {
@@ -21740,7 +21740,7 @@
         "county_fips":18155,
         "state_name":"Indiana",
         "lat":38.8262,
-        "lng":-85.037,
+        "lng":-85.0369,
         "population":9914
     },
     {
@@ -22027,7 +22027,7 @@
         "county_full":"Wilkes County",
         "county_fips":13317,
         "state_name":"Georgia",
-        "lat":33.7819,
+        "lat":33.782,
         "lng":-82.7432,
         "population":9553
     },
@@ -22082,7 +22082,7 @@
         "county_fips":29093,
         "state_name":"Missouri",
         "lat":37.5552,
-        "lng":-90.7734,
+        "lng":-90.7735,
         "population":9482
     },
     {
@@ -22199,7 +22199,7 @@
         "county_fips":27117,
         "state_name":"Minnesota",
         "lat":44.023,
-        "lng":-96.2587,
+        "lng":-96.2586,
         "population":9352
     },
     {
@@ -22293,21 +22293,21 @@
         "population":9181
     },
     {
-        "county":"Davis",
-        "county_full":"Davis County",
-        "county_fips":19051,
-        "state_name":"Iowa",
-        "lat":40.7477,
-        "lng":-92.4097,
-        "population":9127
-    },
-    {
         "county":"McLean",
         "county_full":"McLean County",
         "county_fips":21149,
         "state_name":"Kentucky",
         "lat":37.5292,
         "lng":-87.2636,
+        "population":9127
+    },
+    {
+        "county":"Davis",
+        "county_full":"Davis County",
+        "county_fips":19051,
+        "state_name":"Iowa",
+        "lat":40.7477,
+        "lng":-92.4097,
         "population":9127
     },
     {
@@ -22333,7 +22333,7 @@
         "county_full":"Stillwater County",
         "county_fips":30095,
         "state_name":"Montana",
-        "lat":45.6691,
+        "lat":45.669,
         "lng":-109.3952,
         "population":9052
     },
@@ -22397,7 +22397,7 @@
         "county_fips":20029,
         "state_name":"Kansas",
         "lat":39.4803,
-        "lng":-97.6493,
+        "lng":-97.6492,
         "population":8973
     },
     {
@@ -22495,8 +22495,8 @@
         "county_full":"White Pine County",
         "county_fips":32033,
         "state_name":"Nevada",
-        "lat":39.4422,
-        "lng":-114.9016,
+        "lat":39.4421,
+        "lng":-114.9017,
         "population":8856
     },
     {
@@ -23000,7 +23000,7 @@
         "county_fips":13003,
         "state_name":"Georgia",
         "lat":31.2971,
-        "lng":-82.8801,
+        "lng":-82.88,
         "population":8261
     },
     {
@@ -23125,7 +23125,7 @@
         "county_full":"Prairie County",
         "county_fips":5117,
         "state_name":"Arkansas",
-        "lat":34.8297,
+        "lat":34.8298,
         "lng":-91.5528,
         "population":8162
     },
@@ -23161,7 +23161,7 @@
         "county_full":"Boise County",
         "county_fips":16015,
         "state_name":"Idaho",
-        "lat":43.9891,
+        "lat":43.9892,
         "lng":-115.7303,
         "population":8045
     },
@@ -23207,7 +23207,7 @@
         "county_fips":49025,
         "state_name":"Utah",
         "lat":37.2851,
-        "lng":-111.8879,
+        "lng":-111.8878,
         "population":7996
     },
     {
@@ -23243,7 +23243,7 @@
         "county_fips":20193,
         "state_name":"Kansas",
         "lat":39.3509,
-        "lng":-101.0555,
+        "lng":-101.0556,
         "population":7913
     },
     {
@@ -23413,7 +23413,7 @@
         "county_full":"Liberty County",
         "county_fips":12077,
         "state_name":"Florida",
-        "lat":30.2413,
+        "lat":30.2414,
         "lng":-84.8829,
         "population":7650
     },
@@ -23454,15 +23454,6 @@
         "population":7592
     },
     {
-        "county":"Yoakum",
-        "county_full":"Yoakum County",
-        "county_fips":48501,
-        "state_name":"Texas",
-        "lat":33.173,
-        "lng":-102.8278,
-        "population":7589
-    },
-    {
         "county":"Greene",
         "county_full":"Greene County",
         "county_fips":1063,
@@ -23472,11 +23463,20 @@
         "population":7589
     },
     {
+        "county":"Yoakum",
+        "county_full":"Yoakum County",
+        "county_fips":48501,
+        "state_name":"Texas",
+        "lat":33.173,
+        "lng":-102.8278,
+        "population":7589
+    },
+    {
         "county":"Pleasants",
         "county_full":"Pleasants County",
         "county_fips":54073,
         "state_name":"West Virginia",
-        "lat":39.371,
+        "lat":39.3709,
         "lng":-81.1606,
         "population":7572
     },
@@ -23652,15 +23652,6 @@
         "population":7406
     },
     {
-        "county":"Grand Isle",
-        "county_full":"Grand Isle County",
-        "county_fips":50013,
-        "state_name":"Vermont",
-        "lat":44.7981,
-        "lng":-73.2948,
-        "population":7393
-    },
-    {
         "county":"Hutchinson",
         "county_full":"Hutchinson County",
         "county_fips":46067,
@@ -23670,12 +23661,21 @@
         "population":7393
     },
     {
+        "county":"Grand Isle",
+        "county_full":"Grand Isle County",
+        "county_fips":50013,
+        "state_name":"Vermont",
+        "lat":44.7981,
+        "lng":-73.2948,
+        "population":7393
+    },
+    {
         "county":"Worth",
         "county_full":"Worth County",
         "county_fips":19195,
         "state_name":"Iowa",
         "lat":43.3774,
-        "lng":-93.2608,
+        "lng":-93.2609,
         "population":7380
     },
     {
@@ -23702,7 +23702,7 @@
         "county_fips":55091,
         "state_name":"Wisconsin",
         "lat":44.5829,
-        "lng":-92.0016,
+        "lng":-92.0015,
         "population":7372
     },
     {
@@ -23908,7 +23908,7 @@
         "county_full":"Nemaha County",
         "county_fips":31127,
         "state_name":"Nebraska",
-        "lat":40.3877,
+        "lat":40.3876,
         "lng":-95.8498,
         "population":7035
     },
@@ -23989,8 +23989,8 @@
         "county_full":"Chugach Census Area",
         "county_fips":2063,
         "state_name":"Alaska",
-        "lat":60.7234,
-        "lng":-145.7714,
+        "lat":60.7233,
+        "lng":-145.7583,
         "population":6964
     },
     {
@@ -24224,7 +24224,7 @@
         "county_fips":51530,
         "state_name":"Virginia",
         "lat":37.7319,
-        "lng":-79.3569,
+        "lng":-79.3568,
         "population":6612
     },
     {
@@ -24246,15 +24246,6 @@
         "population":6570
     },
     {
-        "county":"Bear Lake",
-        "county_full":"Bear Lake County",
-        "county_fips":16007,
-        "state_name":"Idaho",
-        "lat":42.2848,
-        "lng":-111.3297,
-        "population":6552
-    },
-    {
         "county":"Surry",
         "county_full":"Surry County",
         "county_fips":51181,
@@ -24264,13 +24255,13 @@
         "population":6552
     },
     {
-        "county":"Wayne",
-        "county_full":"Wayne County",
-        "county_fips":19185,
-        "state_name":"Iowa",
-        "lat":40.7395,
-        "lng":-93.3274,
-        "population":6518
+        "county":"Bear Lake",
+        "county_full":"Bear Lake County",
+        "county_fips":16007,
+        "state_name":"Idaho",
+        "lat":42.2848,
+        "lng":-111.3297,
+        "population":6552
     },
     {
         "county":"Rio Blanco",
@@ -24279,6 +24270,15 @@
         "state_name":"Colorado",
         "lat":39.9798,
         "lng":-108.2171,
+        "population":6518
+    },
+    {
+        "county":"Wayne",
+        "county_full":"Wayne County",
+        "county_fips":19185,
+        "state_name":"Iowa",
+        "lat":40.7395,
+        "lng":-93.3274,
         "population":6518
     },
     {
@@ -24304,7 +24304,7 @@
         "county_full":"Howard County",
         "county_fips":31093,
         "state_name":"Nebraska",
-        "lat":41.2201,
+        "lat":41.22,
         "lng":-98.5171,
         "population":6492
     },
@@ -24377,7 +24377,7 @@
         "county_fips":20053,
         "state_name":"Kansas",
         "lat":38.6966,
-        "lng":-98.2047,
+        "lng":-98.2048,
         "population":6366
     },
     {
@@ -24431,7 +24431,7 @@
         "county_fips":30099,
         "state_name":"Montana",
         "lat":47.8371,
-        "lng":-112.2409,
+        "lng":-112.2408,
         "population":6291
     },
     {
@@ -24521,7 +24521,7 @@
         "county_fips":55051,
         "state_name":"Wisconsin",
         "lat":46.2623,
-        "lng":-90.242,
+        "lng":-90.2421,
         "population":6164
     },
     {
@@ -24629,7 +24629,7 @@
         "county_fips":18115,
         "state_name":"Indiana",
         "lat":38.9501,
-        "lng":-84.9651,
+        "lng":-84.9652,
         "population":5993
     },
     {
@@ -24759,21 +24759,21 @@
         "population":5835
     },
     {
-        "county":"Carson",
-        "county_full":"Carson County",
-        "county_fips":48065,
-        "state_name":"Texas",
-        "lat":35.4035,
-        "lng":-101.3542,
-        "population":5802
-    },
-    {
         "county":"San Saba",
         "county_full":"San Saba County",
         "county_fips":48411,
         "state_name":"Texas",
         "lat":31.1552,
         "lng":-98.8176,
+        "population":5802
+    },
+    {
+        "county":"Carson",
+        "county_full":"Carson County",
+        "county_fips":48065,
+        "state_name":"Texas",
+        "lat":35.4035,
+        "lng":-101.3542,
         "population":5802
     },
     {
@@ -24808,8 +24808,8 @@
         "county_full":"Lander County",
         "county_fips":32015,
         "state_name":"Nevada",
-        "lat":39.9335,
-        "lng":-117.0381,
+        "lat":39.9337,
+        "lng":-117.038,
         "population":5745
     },
     {
@@ -24827,7 +24827,7 @@
         "county_fips":46087,
         "state_name":"South Dakota",
         "lat":43.6743,
-        "lng":-97.3684,
+        "lng":-97.3685,
         "population":5732
     },
     {
@@ -24898,8 +24898,8 @@
         "county_full":"Emporia City",
         "county_fips":51595,
         "state_name":"Virginia",
-        "lat":36.6953,
-        "lng":-77.5357,
+        "lat":36.6952,
+        "lng":-77.5364,
         "population":5633
     },
     {
@@ -25457,7 +25457,7 @@
         "county_fips":31169,
         "state_name":"Nebraska",
         "lat":40.1762,
-        "lng":-97.5949,
+        "lng":-97.595,
         "population":4938
     },
     {
@@ -25475,7 +25475,7 @@
         "county_fips":51045,
         "state_name":"Virginia",
         "lat":37.4817,
-        "lng":-80.2115,
+        "lng":-80.2114,
         "population":4881
     },
     {
@@ -25520,7 +25520,7 @@
         "county_fips":8121,
         "state_name":"Colorado",
         "lat":39.971,
-        "lng":-103.2013,
+        "lng":-103.2012,
         "population":4839
     },
     {
@@ -25637,7 +25637,7 @@
         "county_fips":56017,
         "state_name":"Wyoming",
         "lat":43.719,
-        "lng":-108.4421,
+        "lng":-108.4422,
         "population":4618
     },
     {
@@ -25663,7 +25663,7 @@
         "county_full":"Adams County",
         "county_fips":16003,
         "state_name":"Idaho",
-        "lat":44.8895,
+        "lat":44.8896,
         "lng":-116.4538,
         "population":4599
     },
@@ -25691,7 +25691,7 @@
         "county_fips":31123,
         "state_name":"Nebraska",
         "lat":41.716,
-        "lng":-103.0104,
+        "lng":-103.0105,
         "population":4544
     },
     {
@@ -25781,17 +25781,8 @@
         "county_fips":35019,
         "state_name":"New Mexico",
         "lat":34.8633,
-        "lng":-104.7907,
+        "lng":-104.7906,
         "population":4379
-    },
-    {
-        "county":"Kimble",
-        "county_full":"Kimble County",
-        "county_fips":48267,
-        "state_name":"Texas",
-        "lat":30.4868,
-        "lng":-99.7487,
-        "population":4355
     },
     {
         "county":"Marshall",
@@ -25800,6 +25791,15 @@
         "state_name":"South Dakota",
         "lat":45.7586,
         "lng":-97.5986,
+        "population":4355
+    },
+    {
+        "county":"Kimble",
+        "county_full":"Kimble County",
+        "county_fips":48267,
+        "state_name":"Texas",
+        "lat":30.4868,
+        "lng":-99.7487,
         "population":4355
     },
     {
@@ -25871,7 +25871,7 @@
         "county_fips":32029,
         "state_name":"Nevada",
         "lat":39.447,
-        "lng":-119.5293,
+        "lng":-119.5294,
         "population":4139
     },
     {
@@ -26042,7 +26042,7 @@
         "county_fips":38103,
         "state_name":"North Dakota",
         "lat":47.5875,
-        "lng":-99.6609,
+        "lng":-99.661,
         "population":3942
     },
     {
@@ -26122,7 +26122,7 @@
         "county_full":"Knox County",
         "county_fips":29103,
         "state_name":"Missouri",
-        "lat":40.1282,
+        "lat":40.1283,
         "lng":-92.1481,
         "population":3760
     },
@@ -26158,7 +26158,7 @@
         "county_full":"Sweet Grass County",
         "county_fips":30097,
         "state_name":"Montana",
-        "lat":45.8139,
+        "lat":45.8138,
         "lng":-109.941,
         "population":3713
     },
@@ -26185,7 +26185,7 @@
         "county_full":"Catron County",
         "county_fips":35003,
         "state_name":"New Mexico",
-        "lat":33.9152,
+        "lat":33.9153,
         "lng":-108.4046,
         "population":3685
     },
@@ -26330,7 +26330,7 @@
         "county_fips":8009,
         "state_name":"Colorado",
         "lat":37.3192,
-        "lng":-102.5604,
+        "lng":-102.5605,
         "population":3460
     },
     {
@@ -26518,7 +26518,7 @@
         "county_full":"Reagan County",
         "county_fips":48383,
         "state_name":"Texas",
-        "lat":31.3662,
+        "lat":31.3661,
         "lng":-101.5231,
         "population":3259
     },
@@ -26757,21 +26757,21 @@
         "population":2821
     },
     {
-        "county":"Edwards",
-        "county_full":"Edwards County",
-        "county_fips":20047,
-        "state_name":"Kansas",
-        "lat":37.8876,
-        "lng":-99.3122,
-        "population":2817
-    },
-    {
         "county":"Fallon",
         "county_full":"Fallon County",
         "county_fips":30025,
         "state_name":"Montana",
         "lat":46.334,
         "lng":-104.4174,
+        "population":2817
+    },
+    {
+        "county":"Edwards",
+        "county_full":"Edwards County",
+        "county_fips":20047,
+        "state_name":"Kansas",
+        "lat":37.8876,
+        "lng":-99.3121,
         "population":2817
     },
     {
@@ -26843,7 +26843,7 @@
         "county_fips":20135,
         "state_name":"Kansas",
         "lat":38.4794,
-        "lng":-99.9161,
+        "lng":-99.9162,
         "population":2659
     },
     {
@@ -26878,8 +26878,8 @@
         "county_full":"Copper River Census Area",
         "county_fips":2066,
         "state_name":"Alaska",
-        "lat":61.8834,
-        "lng":-143.9681,
+        "lat":61.8855,
+        "lng":-143.97,
         "population":2626
     },
     {
@@ -27058,7 +27058,7 @@
         "county_full":"Niobrara County",
         "county_fips":56027,
         "state_name":"Wyoming",
-        "lat":43.0564,
+        "lat":43.0565,
         "lng":-104.4754,
         "population":2415
     },
@@ -27112,7 +27112,7 @@
         "county_full":"Webster County",
         "county_fips":13307,
         "state_name":"Georgia",
-        "lat":32.0469,
+        "lat":32.0468,
         "lng":-84.5511,
         "population":2348
     },
@@ -27157,8 +27157,8 @@
         "county_full":"Hoonah-Angoon Census Area",
         "county_fips":2105,
         "state_name":"Alaska",
-        "lat":58.2872,
-        "lng":-135.6402,
+        "lat":58.287,
+        "lng":-135.6393,
         "population":2313
     },
     {
@@ -27297,21 +27297,21 @@
         "population":2113
     },
     {
-        "county":"Keweenaw",
-        "county_full":"Keweenaw County",
-        "county_fips":26083,
-        "state_name":"Michigan",
-        "lat":47.628,
-        "lng":-88.4346,
-        "population":2106
-    },
-    {
         "county":"Wrangell",
         "county_full":"Wrangell City and Borough",
         "county_fips":2275,
         "state_name":"Alaska",
         "lat":56.3323,
         "lng":-132.0221,
+        "population":2106
+    },
+    {
+        "county":"Keweenaw",
+        "county_full":"Keweenaw County",
+        "county_fips":26083,
+        "state_name":"Michigan",
+        "lat":47.628,
+        "lng":-88.4346,
         "population":2106
     },
     {
@@ -27337,8 +27337,8 @@
         "county_full":"Haines Borough",
         "county_fips":2100,
         "state_name":"Alaska",
-        "lat":59.1199,
-        "lng":-135.5002,
+        "lat":59.1186,
+        "lng":-135.5007,
         "population":2077
     },
     {
@@ -27481,7 +27481,7 @@
         "county_full":"Logan County",
         "county_fips":38047,
         "state_name":"North Dakota",
-        "lat":46.4573,
+        "lat":46.4574,
         "lng":-99.4774,
         "population":1848
     },
@@ -27545,17 +27545,8 @@
         "county_fips":46017,
         "state_name":"South Dakota",
         "lat":44.0763,
-        "lng":-99.2049,
+        "lng":-99.2048,
         "population":1757
-    },
-    {
-        "county":"Jeff Davis",
-        "county_full":"Jeff Davis County",
-        "county_fips":48243,
-        "state_name":"Texas",
-        "lat":30.7154,
-        "lng":-104.14,
-        "population":1740
     },
     {
         "county":"Taliaferro",
@@ -27564,6 +27555,15 @@
         "state_name":"Georgia",
         "lat":33.5661,
         "lng":-82.8788,
+        "population":1740
+    },
+    {
+        "county":"Jeff Davis",
+        "county_full":"Jeff Davis County",
+        "county_fips":48243,
+        "state_name":"Texas",
+        "lat":30.7154,
+        "lng":-104.14,
         "population":1740
     },
     {
@@ -27589,7 +27589,7 @@
         "county_full":"Haakon County",
         "county_fips":46055,
         "state_name":"South Dakota",
-        "lat":44.2944,
+        "lat":44.2945,
         "lng":-101.5399,
         "population":1708
     },
@@ -27652,7 +27652,7 @@
         "county_full":"Eureka County",
         "county_fips":32011,
         "state_name":"Nevada",
-        "lat":39.9839,
+        "lat":39.9838,
         "lng":-116.2686,
         "population":1660
     },
@@ -27698,7 +27698,7 @@
         "county_fips":30019,
         "state_name":"Montana",
         "lat":48.7838,
-        "lng":-105.5486,
+        "lng":-105.5485,
         "population":1524
     },
     {
@@ -27711,21 +27711,21 @@
         "population":1497
     },
     {
-        "county":"Sully",
-        "county_full":"Sully County",
-        "county_fips":46119,
-        "state_name":"South Dakota",
-        "lat":44.7156,
-        "lng":-100.1322,
-        "population":1481
-    },
-    {
         "county":"Campbell",
         "county_full":"Campbell County",
         "county_fips":46021,
         "state_name":"South Dakota",
         "lat":45.7712,
         "lng":-100.0516,
+        "population":1481
+    },
+    {
+        "county":"Sully",
+        "county_full":"Sully County",
+        "county_fips":46119,
+        "state_name":"South Dakota",
+        "lat":44.7156,
+        "lng":-100.1322,
         "population":1481
     },
     {
@@ -27823,8 +27823,8 @@
         "county_full":"Skagway Municipality",
         "county_fips":2230,
         "state_name":"Alaska",
-        "lat":59.563,
-        "lng":-135.3363,
+        "lat":59.5614,
+        "lng":-135.3382,
         "population":1308
     },
     {
@@ -27887,7 +27887,7 @@
         "county_fips":48045,
         "state_name":"Texas",
         "lat":34.5303,
-        "lng":-101.2086,
+        "lng":-101.2085,
         "population":1223
     },
     {
@@ -27922,7 +27922,7 @@
         "county_full":"Issaquena County",
         "county_fips":28055,
         "state_name":"Mississippi",
-        "lat":32.7415,
+        "lat":32.7414,
         "lng":-90.9892,
         "population":1095
     },
@@ -27949,7 +27949,7 @@
         "county_full":"Glasscock County",
         "county_fips":48173,
         "state_name":"Texas",
-        "lat":31.8695,
+        "lat":31.8694,
         "lng":-101.5208,
         "population":1070
     },
@@ -27990,21 +27990,21 @@
         "population":948
     },
     {
-        "county":"Hinsdale",
-        "county_full":"Hinsdale County",
-        "county_fips":8053,
-        "state_name":"Colorado",
-        "lat":37.8213,
-        "lng":-107.3003,
-        "population":939
-    },
-    {
         "county":"Keya Paha",
         "county_full":"Keya Paha County",
         "county_fips":31103,
         "state_name":"Nebraska",
         "lat":42.8789,
         "lng":-99.7124,
+        "population":939
+    },
+    {
+        "county":"Hinsdale",
+        "county_full":"Hinsdale County",
+        "county_fips":8053,
+        "state_name":"Colorado",
+        "lat":37.8213,
+        "lng":-107.3003,
         "population":939
     },
     {
@@ -28021,8 +28021,8 @@
         "county_full":"Bristol Bay Borough",
         "county_fips":2060,
         "state_name":"Alaska",
-        "lat":58.7439,
-        "lng":-156.7,
+        "lat":58.7431,
+        "lng":-156.7015,
         "population":878
     },
     {
@@ -28080,21 +28080,21 @@
         "population":795
     },
     {
-        "county":"Wheeler",
-        "county_full":"Wheeler County",
-        "county_fips":31183,
-        "state_name":"Nebraska",
-        "lat":41.9148,
-        "lng":-98.5282,
-        "population":785
-    },
-    {
         "county":"Roberts",
         "county_full":"Roberts County",
         "county_fips":48393,
         "state_name":"Texas",
         "lat":35.8384,
         "lng":-100.8136,
+        "population":785
+    },
+    {
+        "county":"Wheeler",
+        "county_full":"Wheeler County",
+        "county_fips":31183,
+        "state_name":"Nebraska",
+        "lat":41.9148,
+        "lng":-98.5282,
         "population":785
     },
     {
@@ -28183,7 +28183,7 @@
         "county_full":"Thomas County",
         "county_fips":31171,
         "state_name":"Nebraska",
-        "lat":41.9136,
+        "lat":41.9137,
         "lng":-100.5558,
         "population":626
     },
@@ -28201,7 +28201,7 @@
         "county_full":"Hooker County",
         "county_fips":31091,
         "state_name":"Nebraska",
-        "lat":41.916,
+        "lat":41.9161,
         "lng":-101.1353,
         "population":613
     },
@@ -28228,8 +28228,8 @@
         "county_full":"Yakutat City and Borough",
         "county_fips":2282,
         "state_name":"Alaska",
-        "lat":59.8889,
-        "lng":-140.3577,
+        "lat":59.8888,
+        "lng":-140.3575,
         "population":506
     },
     {
@@ -28256,7 +28256,7 @@
         "county_fips":31009,
         "state_name":"Nebraska",
         "lat":41.9128,
-        "lng":-99.9768,
+        "lng":-99.9767,
         "population":385
     },
     {
