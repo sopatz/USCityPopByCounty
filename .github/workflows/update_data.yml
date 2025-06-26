@@ -28,10 +28,9 @@ jobs:
       - name: Read Update Status
         id: read_status
         run: |
-          echo 'STATUS<<EOF' >> $GITHUB_ENV
-          cat update_status.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-        continue-on-error: true
+          echo "status<<EOF" >> $GITHUB_OUTPUT
+          cat update_status.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Send Email Notification
         if: always()
@@ -45,9 +44,8 @@ jobs:
           body: |
             Weekly data update has completed.
 
-            ${{ env.STATUS }}
+            ${{ steps.read_status.outputs.status }}
 
             View logs: https://github.com/sopatz/USCityPopByCounty/actions
           to: ${{ secrets.TO_EMAIL }}
           from: ${{ secrets.FROM_EMAIL }}
-          
