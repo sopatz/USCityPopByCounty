@@ -550,10 +550,11 @@
         const userLocationCheckbox = document.getElementById("show-user-location");
 
         function enableUserLocation() {
-            map.locate({ setView: false, maxZoom: 12, watch: false });
+            const timeoutMs = 8000;
+            let locationFound = false;
 
-            map.once("locationfound", function (e) {
-                const radius = e.accuracy / 2;
+            function onLocationFound(e) {
+                locationFound = true;
 
                 if (userLocationMarker) {
                     userLocationMarker.setLatLng(e.latlng);
@@ -567,12 +568,35 @@
                     .bindPopup("You are here.")
                     .addTo(map);
                 }
+
+                map.off("locationfound", onLocationFound);
+                map.off("locationerror", onLocationError);
+            }
+
+            function onLocationError(e) {
+                locationFound = false;
+                alert("Unable to retrieve your location. Please check permissions or signal.");
+                userLocationCheckbox.checked = false;
+                map.off("locationfound", onLocationFound);
+                map.off("locationerror", onLocationError);
+            }
+
+            map.on("locationfound", onLocationFound);
+            map.on("locationerror", onLocationError);
+
+            map.locate({
+                setView: false,
+                maxZoom: 12,
+                watch: false,
+                enableHighAccuracy: true
             });
 
-            map.once("locationerror", function () {
-                alert("Unable to retrieve your location. Please check your browser settings.");
-                userLocationCheckbox.checked = false;
-            });
+            // Optional fallback if nothing comes back in time
+            setTimeout(() => {
+                if (!locationFound) {
+                    onLocationError();
+                }
+            }, timeoutMs);
         }
 
         // Initial location (default ON)
