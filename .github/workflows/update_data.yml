@@ -44,7 +44,7 @@ jobs:
 
             ${{ env.STATUS }}
 
-            View logs: https://github.com/your-username/your-repo/actions
+            View logs: https://github.com/sopatz/USCityPopByCounty/actions
           to: ${{ secrets.TO_EMAIL }}
           from: ${{ secrets.FROM_EMAIL }}
           content_type: text/plain
