@@ -600,7 +600,7 @@
         }
 
         // Initial location (default ON)
-        enableUserLocation();
+        //enableUserLocation();
 
         // Toggle user location
         userLocationCheckbox.addEventListener("change", function () {
@@ -611,6 +611,12 @@
                 userLocationMarker = null;
             }
         });
+
+        window.onload = function () {
+            if (userLocationCheckbox.checked) {
+                enableUserLocation();
+            }
+        };
     </script>
 
 </body>
