@@ -27,7 +27,10 @@ jobs:
 
       - name: Read Update Status
         id: read_status
-        run: echo "STATUS=$(cat update_status.txt)" >> $GITHUB_ENV
+        run: |
+          echo 'STATUS<<EOF' >> $GITHUB_ENV
+          cat update_status.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
         continue-on-error: true
 
       - name: Send Email Notification
@@ -47,5 +50,4 @@ jobs:
             View logs: https://github.com/sopatz/USCityPopByCounty/actions
           to: ${{ secrets.TO_EMAIL }}
           from: ${{ secrets.FROM_EMAIL }}
-          content_type: text/plain
           
