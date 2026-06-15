@@ -158,6 +158,39 @@
             color: black;
         }
 
+        .legend {
+            background: white;
+            padding: 10px 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            line-height: 1.5;
+            font-size: 13px;
+        }
+
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .legend-color {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            border: 1px solid #666;
+        }
+
+        .legend-icon {
+            width: 18px;
+            height: 30px;
+            margin-right: 8px;
+        }
+
         /* Slide-in animation */
         @keyframes slideIn {
             from {
@@ -218,7 +251,11 @@
     </div>
 
     <script>
-        var map = L.map('map').setView([37.8, -96], 4); //center map on the US
+        const map = L.map('map').setView([37.8, -96], 4); //center map on the US
+
+        // Create special pane for location dot so it always appears on top of map
+        map.createPane("locationPane");
+        map.getPane("locationPane").style.zIndex = 450;
 
         let cityData = [];
         let cityMarkers = L.layerGroup().addTo(map);
@@ -226,10 +263,63 @@
         let countyLayers = {}; // Stores county layers for searching
         let numCitiesToShow = 5; // Default number of cities to display
 
+        const cityIcon = new L.Icon({
+            iconUrl: "marker-icon.png",
+            //iconRetinaUrl: "marker-icon-2x.png",
+            shadowUrl: "marker-shadow.png",
+
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        const countySeatIcon = new L.Icon({
+            iconUrl: "marker-icon-gold.png",
+            shadowUrl: "marker-shadow.png",
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
         // Add tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
+
+        const legend = L.control({ position: "bottomleft" });
+        legend.onAdd = function () {
+            const div = L.DomUtil.create("div", "legend");
+            div.innerHTML = `
+                <div class="legend-title">Legend</div>
+
+                <div class="legend-item">
+                    <img src="marker-icon.png" class="legend-icon">
+                    City
+                </div>
+
+                <div class="legend-item">
+                    <img src="marker-icon-gold.png" class="legend-icon">
+                    County Seat
+                </div>
+
+                <div class="legend-item">
+                    <div class="legend-color" style="
+                        background:#007bff;
+                        border-radius:50%;
+                        width:12px;
+                        height:12px;
+                        margin-left:3px;
+                        margin-right:11px;">
+                    </div>
+                    Your Location
+                </div>
+            `;
+            return div;
+        };
+
+        legend.addTo(map);
 
         // Load county GeoJSON
         fetch("county_data.geojson")
@@ -258,11 +348,10 @@
                 L.geoJSON(countyData, {
                     style: function(feature) {
                         let state = feature.properties.ste_name[0];
-                        let county = feature.properties.coty_name[0];
 
                         let fillColor = "#777777"; // Default color
 
-                        // Entire state colors
+                        // Assign fill colors to each state/territory
                         if (state === "Ohio" || state === "Virginia" || state === "Illinois" || 
                             state === "Minnesota" || state === "Delaware" || state === "Massachusetts" ||
                             state === "South Carolina" || state === "Alabama" || state === "Arkansas" ||
@@ -290,7 +379,8 @@
                         else if (state === "Wisconsin" || state === "New Hampshire" || state === "New Jersey" || 
                                  state === "West Virginia" || state === "Tennessee" || state === "Louisiana" || 
                                  state === "Nebraska" || state === "Oklahoma" || state === "Montana" || 
-                                 state === "Arizona" || state === "Hawaii" || state === "Puerto Rico") 
+                                 state === "Arizona" || state === "Hawaii" || state === "Puerto Rico" || 
+                                 state === "District of Columbia") 
                         {
                             fillColor = "#ffb2b2";  // Red
                         }
@@ -374,7 +464,23 @@
                     let paddedFIPS = entry.county_fips.toString().padStart(5, '0');
                     countyPopulationLookup[paddedFIPS] = entry.population;
                 });
-        });
+            });
+
+        let countySeats = {};
+        fetch("county_seats.json")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(entry => {
+                    let fips = entry["County FIPS Code"]
+                        .toString()
+                        .padStart(5, '0');
+
+                    countySeats[fips] = {
+                        seat: entry["Seat"],
+                        secondSeat: entry["Second Seat"]
+                    };
+                });
+            });
 
         // Settings Modal Logic
         const settingsButton = document.getElementById("settings-button");
@@ -440,6 +546,23 @@
             }
         });
 
+        function normalizeCity(name) {
+            return name
+                .toLowerCase()
+                .replace(/\./g, "")
+                .replace(/-/g, " ")
+                .trim();
+        }
+
+        function isCountySeat(cityName, countyFIPS) {
+            let seatInfo = countySeats[countyFIPS];
+            if (!seatInfo) return false;
+            return (
+                normalizeCity(cityName) === normalizeCity(seatInfo.seat) ||
+                normalizeCity(cityName) === normalizeCity(seatInfo.secondSeat)
+            );
+        }
+
         function showCitiesPopup(countyName, fullCountyName, countyFIPS, countyType, latlng) {
             cityMarkers.clearLayers();
             let cities = cityData
@@ -448,13 +571,39 @@
                 .slice(0, numCitiesToShow);
 
             cities.forEach(city => {
+
                 let adjustedLng = city.lng > 0 ? city.lng - 360 : city.lng;
-                L.marker([city.lat, adjustedLng])
-                    .bindPopup(`<b>${city.city}</b><br>Population: ${city.population.toLocaleString()}`)
+
+                let seat = isCountySeat(city.city, countyFIPS);
+
+                let marker = L.marker(
+                    [city.lat, adjustedLng],
+                    { icon: seat ? countySeatIcon : cityIcon }
+                );
+
+                marker
+                    .bindPopup(`
+                        <b style="color:${seat ? "#d99000" : "black"}">
+                            ${city.city}
+                        </b>
+                        <br>
+                        Population: ${city.population.toLocaleString()}
+                    `)
                     .addTo(cityMarkers);
+
             });
 
-            let cityList = cities.map(city => `${city.city} (${city.population.toLocaleString()})`);
+            let cityList = cities.map(city => {
+                let seat = isCountySeat(city.city, countyFIPS);
+                return seat
+                    ? `<span style="
+                            color:#d99000;
+                            font-weight:bold;">
+                            ${city.city}
+                    </span>
+                    (${city.population.toLocaleString()})`: `${city.city}
+                    (${city.population.toLocaleString()})`;
+            });
 
             let label = "County";
             switch (countyType) {
@@ -542,7 +691,6 @@
         searchInput.addEventListener("input", function () {
             clearBtn.style.display = this.value ? "block" : "none";
             let query = this.value.toLowerCase().trim();
-            let suggestionsBox = document.getElementById("suggestions");
 
             if (!query) {
                 suggestionsBox.style.display = "none";
@@ -606,6 +754,7 @@
                     userLocationMarker.setLatLng(e.latlng);
                 } else {
                     userLocationMarker = L.circleMarker(e.latlng, {
+                        pane: "locationPane",  // makes sure this is on top of everything else
                         radius: 6,
                         color: "#005bff",
                         fillColor: "#007bff",
