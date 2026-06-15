@@ -74,23 +74,6 @@ body {
     background: #f0f0f0;
 }
 
-/* Move zoom buttons above settings button on mobile */
-@media (max-width: 768px) {
-    .leaflet-top.leaflet-left {
-        top: auto !important;
-        left: auto !important;
-
-        right: 10px !important;
-        bottom: 52px !important;
-
-        flex-direction: column;
-    }
-
-    .leaflet-control-zoom {
-        margin: 0 !important;
-    }
-}
-
 /* Settings Button */
 #settings-button {
     position: absolute;
@@ -103,16 +86,6 @@ body {
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-}
-
-/* Put settings button in bottom-right instead of top-right on mobile */
-@media (max-width: 768px) {
-    #settings-button {
-        top: auto;
-        bottom: 10px;
-        left: auto;
-        right: 10px;
-    }
 }
 
 #settings-button:hover {
@@ -191,6 +164,33 @@ body {
     width: 18px;
     height: 30px;
     margin-right: 8px;
+}
+
+/* Move zoom buttons above settings button on mobile */
+@media (max-width: 768px) {
+    .leaflet-top.leaflet-left {
+        top: auto !important;
+        left: auto !important;
+
+        right: 10px !important;
+        bottom: 110px !important;
+
+        flex-direction: column;
+    }
+
+    .leaflet-control-zoom {
+        margin: 0 !important;
+    }
+}
+
+/* Put settings button in bottom-right instead of top-right on mobile */
+@media (max-width: 768px) {
+    #settings-button {
+        top: auto;
+        bottom: 10px;
+        left: auto;
+        right: 10px;
+    }
 }
 
 @media (max-width: 768px) {
