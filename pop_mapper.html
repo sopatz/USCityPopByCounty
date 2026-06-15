@@ -191,6 +191,12 @@
             margin-right: 8px;
         }
 
+        @media (max-width: 768px) {
+            .leaflet-bottom.leaflet-left {
+                bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+            }
+        }
+
         /* Slide-in animation */
         @keyframes slideIn {
             from {
