@@ -256,8 +256,54 @@
                 });
 
                 L.geoJSON(countyData, {
-                    style: { color: "#555", weight: 1, fillOpacity: 0.3 },
-                    onEachFeature: function (feature, layer) {
+                    style: function(feature) {
+                        let state = feature.properties.ste_name[0];
+                        let county = feature.properties.coty_name[0];
+
+                        let fillColor = "#777777"; // Default color
+
+                        // Entire state colors
+                        if (state === "Ohio" || state === "Virginia" || state === "Illinois" || 
+                            state === "Minnesota" || state === "Delaware" || state === "Massachusetts" ||
+                            state === "South Carolina" || state === "Alabama" || state === "Arkansas" ||
+                            state === "Kansas" || state === "Wyoming" || state === "New Mexico" ||
+                            state === "Nevada" || state === "Washington" || state === "American Samoa") 
+                        {
+                            fillColor = "#a4f3ff";  // Blue
+                        }
+                        else if (state === "Pennsylvania" || state === "Vermont" || state === "Connecticut" || 
+                                 state === "Kentucky" || state === "Michigan" || state === "Georgia" || 
+                                 state === "Iowa" || state === "Texas" || state === "North Dakota" || 
+                                 state === "Colorado" || state === "Idaho" || state === "California" || 
+                                 state === "Guam" || state === "United States Virgin Islands") 
+                        {
+                            fillColor = "#a7ffb3";  // Green
+                        }
+                        else if (state === "Indiana" || state === "Maine" || state === "New York" || 
+                                 state === "Maryland" || state === "North Carolina" || state === "Florida" || 
+                                 state === "Mississippi" || state === "Missouri" || state === "South Dakota" || 
+                                 state === "Utah" || state === "Oregon" || state === "Alaska" || 
+                                 state === "Rhode Island" || state === "Commonwealth of the Northern Mariana Islands") 
+                        {
+                            fillColor = "#fffc9c";  // Yellow
+                        }
+                        else if (state === "Wisconsin" || state === "New Hampshire" || state === "New Jersey" || 
+                                 state === "West Virginia" || state === "Tennessee" || state === "Louisiana" || 
+                                 state === "Nebraska" || state === "Oklahoma" || state === "Montana" || 
+                                 state === "Arizona" || state === "Hawaii" || state === "Puerto Rico") 
+                        {
+                            fillColor = "#ffb2b2";  // Red
+                        }
+
+                        return {
+                            color: "#555",
+                            weight: 1,
+                            fillOpacity: 0.3,
+                            fillColor: fillColor
+                        };
+                    },
+
+                    onEachFeature: function(feature, layer) {
                         let countyName = feature.properties.coty_name[0];
                         let stateName = feature.properties.ste_name[0];
                         let countyType = feature.properties.coty_type;
